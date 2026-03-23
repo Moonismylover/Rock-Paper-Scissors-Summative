@@ -29,7 +29,7 @@
 
             if (ans == "yes")
             {
-                Console.WriteLine("Letter: ");
+                Console.WriteLine("\tLetter: ");
             }
             else
             {
