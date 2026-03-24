@@ -302,7 +302,7 @@ namespace Rock_Paper_Scissors_Summative
                     }
                     if (userBet == 3)
                     {
-                        userBalance = userBalance - userBet
+                        userBalance = userBalance - userBet;
                         computerBalance = computerBalance + (userBet * userBet);
                         Console.WriteLine($"Ohhhh...you WON the game yet lost the bet! Your opponent has earned {(userBet * userBet).ToString("C")}");
                     }
@@ -348,7 +348,7 @@ namespace Rock_Paper_Scissors_Summative
                     }
                     if (userBet == 1)
                     {
-                        userBalance = userBalance - userBet
+                        userBalance = userBalance - userBet;
                         computerBalance = computerBalance + (userBet * userBet);
                         Console.WriteLine($"Ohhhh...you WON the game yet lost the bet! Your opponent has earned {(userBet * userBet).ToString("C")}");
                     }
@@ -394,7 +394,7 @@ namespace Rock_Paper_Scissors_Summative
                     }
                     if (userBet == 2)
                     {
-                        userBalance = userBalance - userBet
+                        userBalance = userBalance - userBet;
                         computerBalance = computerBalance + (userBet * userBet);
                         Console.WriteLine($"Ohhhh...you WON the game yet lost the bet! Your opponent has earned {(userBet * userBet).ToString("C")}");
                     }
@@ -426,10 +426,11 @@ namespace Rock_Paper_Scissors_Summative
                     Console.ReadLine();
                     Console.Clear();
                 }
-                else
+                else if (userChoice == computerChoice)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"\tIt's a TIE! You do not lose any of your bet money or earn any either! No points gained or loss either!");
+                    Console.WriteLine($"\tIt's a TIE! You do not lose the game so NO POINTS!");
+                    if ()
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.ReadLine();
                     Console.Clear();
