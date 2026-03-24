@@ -110,6 +110,31 @@ namespace Rock_Paper_Scissors_Summative
                 userChoice = Convert.ToInt32(Console.ReadLine());
                 Console.ForegroundColor = ConsoleColor.White;
 
+                if (userChoice == 4)
+                {
+                    Console.WriteLine("\tYou just missed the chance to earn some money! Too bad! Until next time then!");
+                    Console.WriteLine();
+                    Thread.Sleep(1000);
+                    Console.WriteLine("\t███████▀▀▀░░░░░░░▀▀▀███████");
+                    Console.WriteLine("\t████▀░░░░░░░░░░░░░░░░░▀████");
+                    Console.WriteLine("\t███│░░░░░░░░░░░░░░░░░░░│███");
+                    Console.WriteLine("\t██▌│░░░░░░░░░░░░░░░░░░░│▐██");
+                    Console.WriteLine("\t██░└┐░░░░░░░░░░░░░░░░░┌┘░██");
+                    Console.WriteLine("\t██░░└┐░░░░░░░░░░░░░░░┌┘░░██");
+                    Console.WriteLine("\t██░░┌┘▄▄▄▄▄░░░░░▄▄▄▄▄└┐░░██");
+                    Console.WriteLine("\t██▌░│██████▌░░░▐██████│░▐██");
+                    Console.WriteLine("\t███░│▐███▀▀░░▄░░▀▀███▌│░███");
+                    Console.WriteLine("\t██▀─┘░░░░░░░▐█▌░░░░░░░└─▀██");
+                    Console.WriteLine("\t██▄░░░▄▄▄▓░░▀█▀░░▓▄▄▄░░░▄██");
+                    Console.WriteLine("\t████▄─┘██▌░░░░░░░▐██└─▄████");
+                    Console.WriteLine("\t█████░░▐█─┬┬┬┬┬┬┬─█▌░░█████");
+                    Console.WriteLine("\t████▌░░░▀┬┼┼┼┼┼┼┼┬▀░░░▐████");
+                    Console.WriteLine("\t█████▄░░░└┴┴┴┴┴┴┴┘░░░▄█████");
+                    Console.WriteLine("\t███████▄░░░░░░░░░░░▄███████");
+                    Console.WriteLine("\t██████████▄▄▄▄▄▄▄██████████");
+                    return;
+                }
+
                 Console.WriteLine();
                 Console.Write("\tWho do you think will win? Options: You (1) or The Computer (2) \n\n\tYour guess: ");
                 Console.ForegroundColor = ConsoleColor.Black;
@@ -123,7 +148,7 @@ namespace Rock_Paper_Scissors_Summative
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine();
 
-                computerChoice = generator.Next(1, 3);
+                computerChoice = generator.Next(1, 4);
 
                 if (computerChoice == 1 && userChoice == 3)
                 {
