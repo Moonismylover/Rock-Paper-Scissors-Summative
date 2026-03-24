@@ -84,25 +84,30 @@ namespace Rock_Paper_Scissors_Summative
             Console.Title = "Rock Paper Scissor...SHOOT!";
 
             string user;
-            int choice;
+            int userChoice, userBalance = 100, userPoints = 0, computerChoice, computerBalance = 100, computerPoints = 0, userBet, winner;
+
+            Random generator = new Random();
 
             Console.BackgroundColor = ConsoleColor.DarkBlue;
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.White;
 
-            Console.Write("Your username: ");
+            Console.Write("\n\tYour username: ");
             Console.ForegroundColor = ConsoleColor.Black;
             user = Console.ReadLine().ToUpper();
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine();
 
-            while
+            for (int round = 1; round <= 10; round = round + 1)
+            {
+                Console.WriteLine($"\tHere is data regarding the current positions of the players in the game. \n\n\t{user}: \n\tBank Balance = {userBalance} \n\tPoints = {userPoints} \n\n\tComputer: \n\tBank Balance: {computerBalance} \n\tPoints = {computerPoints} \n\n\tRound: {round}");
+                Console.WriteLine();
+                Console.Write($"\t{user}! You will input the number assigned to the choice you want! The options include: \n\n\tRock (1) \n\tPaper (2) \n\tScissor (3) \n\tQUIT (4) \n\n\tYour choice: ");
+                Console.ForegroundColor = ConsoleColor.Black;
+                userChoice = Convert.ToInt32(Console.ReadLine());
 
-                    Console.WriteLine("Bank Balance = $100 \nPoints = 0");
-
-            Console.Write($"{user}! You will input the number assigned to the choice you want! The options include: Rock (1), Paper (2), Scissor (3), or to QUIT (4)! \nYour choice: ");
-            choice = Convert.ToInt32(Console.ReadLine());
-
+                
+            }
         }
 
         static void Main(string[] args)
