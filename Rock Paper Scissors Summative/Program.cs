@@ -84,7 +84,7 @@ namespace Rock_Paper_Scissors_Summative
             Console.Title = "Rock Paper Scissor...SHOOT!";
 
             string user;
-            int userChoice, userBalance = 100, userPoints = 0, computerChoice, computerBalance = 100, computerPoints = 0, userBet, winner;
+            int userChoice, userBalance = 100, userPoints = 0, computerChoice, computerBalance = 100, computerPoints = 0, userBet, betAmount, winner;
 
             Random generator = new Random();
 
@@ -105,8 +105,17 @@ namespace Rock_Paper_Scissors_Summative
                 Console.Write($"\t{user}! You will input the number assigned to the choice you want! The options include: \n\n\tRock (1) \n\tPaper (2) \n\tScissor (3) \n\tQUIT (4) \n\n\tYour choice: ");
                 Console.ForegroundColor = ConsoleColor.Black;
                 userChoice = Convert.ToInt32(Console.ReadLine());
+                Console.ForegroundColor = ConsoleColor.White;
 
-
+                Console.WriteLine();
+                Console.Write("\tWho do you think will win? Options: You (1) or The Computer (2) \n\n\tYour guess: ");
+                Console.ForegroundColor = ConsoleColor.Black;
+                userBet = Convert.ToInt32(Console.ReadLine());
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine();
+                Console.Write("\tHow much will you bet on it? \n\tInput here: ");
+                betAmount = Convert.ToInt32(Console.ReadLine());
+                
                 
             }
         }
