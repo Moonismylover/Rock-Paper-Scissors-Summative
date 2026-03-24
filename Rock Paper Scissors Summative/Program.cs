@@ -127,7 +127,12 @@ namespace Rock_Paper_Scissors_Summative
 
                 if (computerChoice == 1 && userChoice == 3)
                 {
-
+                    Console.WriteLine($"\tThe Computer WINS! You LOSE! Rock conquers over Paper!");
+                    userBalance = userBalance - userBet;
+                    computerBalance = computerBalance + (userBet * 2);
+                    userPoints--;
+                    computerPoints++;
+                    Console.WriteLine()
                 }
                 else if (computerChoice == 2 && userChoice = 1)
                 {
