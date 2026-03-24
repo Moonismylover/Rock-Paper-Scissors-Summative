@@ -100,7 +100,9 @@ namespace Rock_Paper_Scissors_Summative
 
             for (int round = 1; round <= 10; round = round + 1)
             {
-                Console.WriteLine($"\tHere is data regarding the current positions of the players in the game. \n\n\t{user}: \n\tBank Balance = {userBalance} \n\tPoints = {userPoints} \n\n\tComputer: \n\tBank Balance: {computerBalance} \n\tPoints = {computerPoints} \n\n\tRound: {round}");
+                Console.WriteLine($"\tRound: {round} ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                Console.WriteLine();
+                Console.WriteLine($"\tHere is data regarding the current positions of the players in the game. \n\n\t{user}: \n\tBank Balance = {userBalance} \n\tPoints = {userPoints} \n\n\tComputer: \n\tBank Balance: {computerBalance} \n\tPoints = {computerPoints}");
                 Console.WriteLine();
                 Console.Write($"\t{user}! You will input the number assigned to the choice you want! The options include: \n\n\tRock (1) \n\tPaper (2) \n\tScissor (3) \n\tQUIT (4) \n\n\tYour choice: ");
                 Console.ForegroundColor = ConsoleColor.Black;
@@ -113,10 +115,18 @@ namespace Rock_Paper_Scissors_Summative
                 userBet = Convert.ToInt32(Console.ReadLine());
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine();
+
                 Console.Write("\tHow much will you bet on it? \n\tInput here: ");
+                Console.ForegroundColor = ConsoleColor.Black;
                 betAmount = Convert.ToInt32(Console.ReadLine());
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine();
+
+                computerChoice = generator.Next(1, 3);
+
+                while ()
                 
-                
+
             }
         }
 
