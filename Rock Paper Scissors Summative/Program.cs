@@ -1,4 +1,6 @@
-﻿namespace Rock_Paper_Scissors_Summative
+﻿using System.Reflection.Metadata;
+
+namespace Rock_Paper_Scissors_Summative
 {
     internal class Program
     {
@@ -41,7 +43,14 @@
                 Console.WriteLine("\t░░▄▄██████████████████████████▄░\t|  ROUNDS OF PLAY! GUESS RIGHT = 1+ POINT VS. GUESS WRONG = -1 POINT.     |");
                 Console.WriteLine("\t▄███████████████████████████████\t|  GOOD LUCK DEAR FRIEND! OH! YOU CAN QUIT AT ANYTIME IF YOU PLEASE!      |");
                 Console.WriteLine("\t████████████████████████████████\t|_________________________________________________________________________|");
-                continue game();
+                Console.WriteLine();
+                Console.WriteLine("\tPress Enter to continue!");
+
+                Console.ReadLine();
+                Console.ResetColor();
+                Console.Clear();
+
+                game();
             }
 
             else
@@ -72,7 +81,28 @@
 
         public static void game()
         {
-            Console.Title = "Rock Paper Scissor...SHOT!";
+            Console.Title = "Rock Paper Scissor...SHOOT!";
+
+            string user;
+            int choice;
+
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.White;
+
+            Console.Write("Your username: ");
+            Console.ForegroundColor = ConsoleColor.Black;
+            user = Console.ReadLine().ToUpper();
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine();
+
+            while
+
+                    Console.WriteLine("Bank Balance = $100 \nPoints = 0");
+
+            Console.Write($"{user}! You will input the number assigned to the choice you want! The options include: Rock (1), Paper (2), Scissor (3), or to QUIT (4)! \nYour choice: ");
+            choice = Convert.ToInt32(Console.ReadLine());
+
         }
 
         static void Main(string[] args)
