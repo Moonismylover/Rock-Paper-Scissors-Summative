@@ -157,32 +157,57 @@ namespace Rock_Paper_Scissors_Summative
                     computerBalance = computerBalance + (userBet * 2);
                     userPoints--;
                     computerPoints++;
-                    Console.WriteLine()
+                    Console.WriteLine("⎛⎝         ⎠⎞");
+                    Console.WriteLine(" ( ` ᢍ ´ ) ");
                 }
-                else if (computerChoice == 2 && userChoice = 1)
+                else if (computerChoice == 2 && userChoice == 1)
                 {
-
+                    Console.WriteLine($"\tThe Computer WINS! You LOSE! Paper conquers over Rock!");
+                    userBalance = userBalance - userBet;
+                    computerBalance = computerBalance + (userBet * 2);
+                    userPoints--;
+                    computerPoints++;
+                    Console.WriteLine("⎛⎝         ⎠⎞");
+                    Console.WriteLine(" ( ` ᢍ ´ ) ");
                 }
                 else if (computerChoice == 3 && userChoice == 2)
                 {
-
+                    Console.WriteLine($"\tThe Computer WINS! You LOSE! Scissor conquers over Paper!");
+                    userBalance = userBalance - userBet;
+                    computerBalance = computerBalance + (userBet * 2);
+                    userPoints--;
+                    computerPoints++;
+                    Console.WriteLine("⎛⎝         ⎠⎞");
+                    Console.WriteLine(" ( ` ᢍ ´ ) ");
                 }
                 else if (userChoice == 1 && computerChoice == 3)
                 {
-
+                    Console.WriteLine($"\t{user} WINS! The Computer LOST! Rock conquers over Scissor!");
+                    userBalance = userBalance - userBet;
+                    computerBalance = computerBalance + (userBet * 2);
+                    userPoints--;
+                    computerPoints++;
+                    Console.WriteLine("⎛⎝         ⎠⎞");
+                    Console.WriteLine(" ( ` ᢍ ´ ) ");
                 }
                 else if (userChoice == 2 && computerChoice == 1)
                 {
-
+                    Console.WriteLine($"\t{user} WINS! The Computer LOST! Paper conquers over Rock!");
+                    userBalance = userBalance - userBet;
+                    computerBalance = computerBalance + (userBet * 2);
+                    userPoints--;
+                    computerPoints++;
+                    Console.WriteLine("⎛⎝         ⎠⎞");
+                    Console.WriteLine(" ( ` ᢍ ´ ) ");
                 }
                 else if (userChoice == 3 && computerChoice == 2)
                 {
 
                 }
-                
-                                    // rock 1 - scissors 3
-                                    // paper 2 - rock 1
-                                    // scissors 3 - paper 2
+
+                // rock 1 - scissors 3
+                // paper 2 - rock 1
+                // scissors 3 - paper 2
 
             }
         }
