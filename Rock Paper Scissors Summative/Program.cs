@@ -89,12 +89,12 @@ namespace Rock_Paper_Scissors_Summative
 
             Random generator = new Random();
 
-            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.BackgroundColor = ConsoleColor.Black;
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.White;
 
             Console.Write("\n\tYour username: ");
-            Console.ForegroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
             user = Console.ReadLine().ToUpper();
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine();
@@ -108,7 +108,7 @@ namespace Rock_Paper_Scissors_Summative
                 Console.WriteLine($"\tHere is data regarding the current positions of the players in the game. \n\n\t{user}: \n\tBank Balance = {userBalance} \n\tPoints = {userPoints} \n\n\tComputer: \n\tBank Balance: {computerBalance} \n\tPoints = {computerPoints}");
                 Console.WriteLine();
                 Console.Write($"\t{user}! You will input the number assigned to the choice you want! The options include: \n\n\tRock (1) \n\tPaper (2) \n\tScissor (3) \n\tQUIT (4) \n\n\tYour choice: ");
-                Console.ForegroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.DarkBlue;
                 userChoice = Convert.ToInt32(Console.ReadLine());
                 Console.ForegroundColor = ConsoleColor.White;
 
@@ -139,151 +139,302 @@ namespace Rock_Paper_Scissors_Summative
 
                 Console.WriteLine();
                 Console.Write("\tWho do you think will win? Options: You (1) or The Computer (2) \n\n\tYour guess: ");
-                Console.ForegroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.DarkBlue;
                 userBet = Convert.ToInt32(Console.ReadLine());
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine();
 
                 Console.Write("\tHow much will you bet on it? \n\tInput here: ");
-                Console.ForegroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.DarkBlue;
                 betAmount = Convert.ToInt32(Console.ReadLine());
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine();
 
                 computerChoice = generator.Next(1, 4);
 
+                
                 if (computerChoice == 1 && userChoice == 3)
                 {
-                    Console.Write("\t");
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine("The Computer WINS! You LOSE! Rock conquers over Paper!");
-                    Console.ResetColor();
-                    userBalance = userBalance - userBet;
-                    computerBalance = computerBalance + (userBet * 2);
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("\tThe Computer WINS! You LOSE! Rock conquers over Paper! (¬‿¬)✧ ");
                     userPoints--;
                     computerPoints++;
-                    Console.Write("\t");
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine("(¬‿¬)✧");
-                    Console.ResetColor();
-                    Console.Write("\t");
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"{user}, you have lost your bet money as well as a point.");
-                    Console.ResetColor();
+                    if (userBet == 1)
+                    {
+                        userBalance = userBalance + (userBet * userBet);
+                        Console.WriteLine($"\tEven though you lost the game...You won {(userBet * userBet).ToString("C")} from your bet!");
+                    }
+                    else if (userBet == 2)
+                    {
+                        userBalance = userBalance - userBet;
+                        computerBalance = computerBalance + (userBet * userBet);
+                        Console.WriteLine($"\tDamn, that's sad...You lost the game...You lost the bet too? Your opponenet won {(userBet + userBet).ToString("C")}!"); 
+                    }
+                    else
+                    {
+                        Console.WriteLine("INVALID INPUT! BYE-BYE~~~");
+                        Console.WriteLine();
+                        Thread.Sleep(1000);
+                        Console.WriteLine("\t███████▀▀▀░░░░░░░▀▀▀███████");
+                        Console.WriteLine("\t████▀░░░░░░░░░░░░░░░░░▀████");
+                        Console.WriteLine("\t███│░░░░░░░░░░░░░░░░░░░│███");
+                        Console.WriteLine("\t██▌│░░░░░░░░░░░░░░░░░░░│▐██");
+                        Console.WriteLine("\t██░└┐░░░░░░░░░░░░░░░░░┌┘░██");
+                        Console.WriteLine("\t██░░└┐░░░░░░░░░░░░░░░┌┘░░██");
+                        Console.WriteLine("\t██░░┌┘▄▄▄▄▄░░░░░▄▄▄▄▄└┐░░██");
+                        Console.WriteLine("\t██▌░│██████▌░░░▐██████│░▐██");
+                        Console.WriteLine("\t███░│▐███▀▀░░▄░░▀▀███▌│░███");
+                        Console.WriteLine("\t██▀─┘░░░░░░░▐█▌░░░░░░░└─▀██");
+                        Console.WriteLine("\t██▄░░░▄▄▄▓░░▀█▀░░▓▄▄▄░░░▄██");
+                        Console.WriteLine("\t████▄─┘██▌░░░░░░░▐██└─▄████");
+                        Console.WriteLine("\t█████░░▐█─┬┬┬┬┬┬┬─█▌░░█████");
+                        Console.WriteLine("\t████▌░░░▀┬┼┼┼┼┼┼┼┬▀░░░▐████");
+                        Console.WriteLine("\t█████▄░░░└┴┴┴┴┴┴┴┘░░░▄█████");
+                        Console.WriteLine("\t███████▄░░░░░░░░░░░▄███████");
+                        Console.WriteLine("\t██████████▄▄▄▄▄▄▄██████████");
+                        return;
+                    }
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.ReadLine();
                     Console.Clear();
                 }
                 else if (computerChoice == 2 && userChoice == 1)
                 {
-                    Console.Write("\t");
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"The Computer WINS! You LOSE! Paper conquers over Rock!");
-                    Console.ResetColor();
-                    userBalance = userBalance - userBet;
-                    computerBalance = computerBalance + (userBet * 2);
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"\tThe Computer WINS! You LOSE! Paper conquers over Rock! (¬‿¬)✧ ");
                     userPoints--;
                     computerPoints++;
-                    Console.Write("\t");
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine("(¬‿¬)✧");
-                    Console.ResetColor();
-                    Console.Write("\t");
-                    Console.BackgroundColor = ConsoleColor.Black; 
-                    Console.WriteLine($"{user}, you have lost your bet money as well as a point.");
-                    Console.ResetColor();
+                    if (userBet == 2)
+                    {
+                        userBalance = userBalance + (userBet * userBet);
+                        Console.WriteLine($"\tEven though you lost the game...You won {(userBet * userBet).ToString("C")} from your bet!");
+                    }
+                    else if (userBet == 1)
+                    {
+                        userBalance = userBalance - userBet;
+                        computerBalance = computerBalance + (userBet * userBet);
+                        Console.WriteLine($"\tDamn, that's sad...You lost the game...You lost the bet too? Your opponenet won {(userBet + userBet).ToString("C")}!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("INVALID INPUT! BYE-BYE~~~");
+                        Console.WriteLine();
+                        Thread.Sleep(1000);
+                        Console.WriteLine("\t███████▀▀▀░░░░░░░▀▀▀███████");
+                        Console.WriteLine("\t████▀░░░░░░░░░░░░░░░░░▀████");
+                        Console.WriteLine("\t███│░░░░░░░░░░░░░░░░░░░│███");
+                        Console.WriteLine("\t██▌│░░░░░░░░░░░░░░░░░░░│▐██");
+                        Console.WriteLine("\t██░└┐░░░░░░░░░░░░░░░░░┌┘░██");
+                        Console.WriteLine("\t██░░└┐░░░░░░░░░░░░░░░┌┘░░██");
+                        Console.WriteLine("\t██░░┌┘▄▄▄▄▄░░░░░▄▄▄▄▄└┐░░██");
+                        Console.WriteLine("\t██▌░│██████▌░░░▐██████│░▐██");
+                        Console.WriteLine("\t███░│▐███▀▀░░▄░░▀▀███▌│░███");
+                        Console.WriteLine("\t██▀─┘░░░░░░░▐█▌░░░░░░░└─▀██");
+                        Console.WriteLine("\t██▄░░░▄▄▄▓░░▀█▀░░▓▄▄▄░░░▄██");
+                        Console.WriteLine("\t████▄─┘██▌░░░░░░░▐██└─▄████");
+                        Console.WriteLine("\t█████░░▐█─┬┬┬┬┬┬┬─█▌░░█████");
+                        Console.WriteLine("\t████▌░░░▀┬┼┼┼┼┼┼┼┬▀░░░▐████");
+                        Console.WriteLine("\t█████▄░░░└┴┴┴┴┴┴┴┘░░░▄█████");
+                        Console.WriteLine("\t███████▄░░░░░░░░░░░▄███████");
+                        Console.WriteLine("\t██████████▄▄▄▄▄▄▄██████████");
+                        return;
+                    }
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.ReadLine();
                     Console.Clear();
                 }
                 else if (computerChoice == 3 && userChoice == 2)
                 {
-                    Console.Write("\t");
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"The Computer WINS! You LOSE! Scissor conquers over Paper!");
-                    Console.ResetColor();
-                    userBalance = userBalance - userBet;
-                    computerBalance = computerBalance + (userBet * 2);
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"\tThe Computer WINS! You LOSE! Scissor conquers over Paper! (¬‿¬)✧ ");
                     userPoints--;
                     computerPoints++;
-                    Console.Write("\t");
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine("(¬‿¬ )✧");
-                    Console.ResetColor();
-                    Console.Write("\t");
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"{user}, you have lost your bet money as well as a point.");
-                    Console.ResetColor();
+                    if (userBet == 3)
+                    {
+                        userBalance = userBalance + (userBet * userBet);
+                        Console.WriteLine($"\tEven though you lost the game...You won {(userBet * userBet).ToString("C")} from your bet!");
+                    }
+                    else if (userBet == 2)
+                    {
+                        userBalance = userBalance - userBet;
+                        computerBalance = computerBalance + (userBet * userBet);
+                        Console.WriteLine($"\tDamn, that's sad...You lost the game...You lost the bet too? Your opponenet won {(userBet + userBet).ToString("C")}!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("INVALID INPUT! BYE-BYE~~~");
+                        Console.WriteLine();
+                        Thread.Sleep(1000);
+                        Console.WriteLine("\t███████▀▀▀░░░░░░░▀▀▀███████");
+                        Console.WriteLine("\t████▀░░░░░░░░░░░░░░░░░▀████");
+                        Console.WriteLine("\t███│░░░░░░░░░░░░░░░░░░░│███");
+                        Console.WriteLine("\t██▌│░░░░░░░░░░░░░░░░░░░│▐██");
+                        Console.WriteLine("\t██░└┐░░░░░░░░░░░░░░░░░┌┘░██");
+                        Console.WriteLine("\t██░░└┐░░░░░░░░░░░░░░░┌┘░░██");
+                        Console.WriteLine("\t██░░┌┘▄▄▄▄▄░░░░░▄▄▄▄▄└┐░░██");
+                        Console.WriteLine("\t██▌░│██████▌░░░▐██████│░▐██");
+                        Console.WriteLine("\t███░│▐███▀▀░░▄░░▀▀███▌│░███");
+                        Console.WriteLine("\t██▀─┘░░░░░░░▐█▌░░░░░░░└─▀██");
+                        Console.WriteLine("\t██▄░░░▄▄▄▓░░▀█▀░░▓▄▄▄░░░▄██");
+                        Console.WriteLine("\t████▄─┘██▌░░░░░░░▐██└─▄████");
+                        Console.WriteLine("\t█████░░▐█─┬┬┬┬┬┬┬─█▌░░█████");
+                        Console.WriteLine("\t████▌░░░▀┬┼┼┼┼┼┼┼┬▀░░░▐████");
+                        Console.WriteLine("\t█████▄░░░└┴┴┴┴┴┴┴┘░░░▄█████");
+                        Console.WriteLine("\t███████▄░░░░░░░░░░░▄███████");
+                        Console.WriteLine("\t██████████▄▄▄▄▄▄▄██████████");
+                        return;
+                    }
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.ReadLine();
                     Console.Clear();
                 }
                 else if (userChoice == 1 && computerChoice == 3)
                 {
-                    Console.Write("\t");
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"{user} WINS! The Computer LOST! Rock conquers over Scissor!");
-                    Console.ResetColor();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"\t{user} WINS! The Computer LOST! Rock conquers over Scissor! (¬‿¬)✧ ");
                     userBalance = userBalance + (userBet * 2);
                     userPoints++;
                     computerPoints--;
-                    Console.Write("\t");
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine("(¬‿¬)✧");
-                    Console.ResetColor();
-                    Console.Write("\t");
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"{user}, you have gained the double of your bet money as well as a point.");
-                    Console.ResetColor();
+                    if (userBet == 1)
+                    {
+                        userBalance = userBalance + (userBet * userBet);
+                        Console.WriteLine($"You WON the game and the BET?! That's some good luck there! You won {(userBet * userBet).ToString("C")}");
+                    }
+                    if (userBet == 3)
+                    {
+                        userBalance = userBalance - userBet
+                        computerBalance = computerBalance + (userBet * userBet);
+                        Console.WriteLine($"Ohhhh...you WON the game yet lost the bet! Your opponent has earned {(userBet * userBet).ToString("C")}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("INVALID INPUT! BYE-BYE~~~");
+                        Console.WriteLine();
+                        Thread.Sleep(1000);
+                        Console.WriteLine("\t███████▀▀▀░░░░░░░▀▀▀███████");
+                        Console.WriteLine("\t████▀░░░░░░░░░░░░░░░░░▀████");
+                        Console.WriteLine("\t███│░░░░░░░░░░░░░░░░░░░│███");
+                        Console.WriteLine("\t██▌│░░░░░░░░░░░░░░░░░░░│▐██");
+                        Console.WriteLine("\t██░└┐░░░░░░░░░░░░░░░░░┌┘░██");
+                        Console.WriteLine("\t██░░└┐░░░░░░░░░░░░░░░┌┘░░██");
+                        Console.WriteLine("\t██░░┌┘▄▄▄▄▄░░░░░▄▄▄▄▄└┐░░██");
+                        Console.WriteLine("\t██▌░│██████▌░░░▐██████│░▐██");
+                        Console.WriteLine("\t███░│▐███▀▀░░▄░░▀▀███▌│░███");
+                        Console.WriteLine("\t██▀─┘░░░░░░░▐█▌░░░░░░░└─▀██");
+                        Console.WriteLine("\t██▄░░░▄▄▄▓░░▀█▀░░▓▄▄▄░░░▄██");
+                        Console.WriteLine("\t████▄─┘██▌░░░░░░░▐██└─▄████");
+                        Console.WriteLine("\t█████░░▐█─┬┬┬┬┬┬┬─█▌░░█████");
+                        Console.WriteLine("\t████▌░░░▀┬┼┼┼┼┼┼┼┬▀░░░▐████");
+                        Console.WriteLine("\t█████▄░░░└┴┴┴┴┴┴┴┘░░░▄█████");
+                        Console.WriteLine("\t███████▄░░░░░░░░░░░▄███████");
+                        Console.WriteLine("\t██████████▄▄▄▄▄▄▄██████████");
+                        return;
+                    }
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.ReadLine();
                     Console.Clear();
                 }
                 else if (userChoice == 2 && computerChoice == 1)
                 {
-                    Console.Write("\t");
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"{user} WINS! The Computer LOST! Paper conquers over Rock!");
-                    Console.ResetColor();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"\t{user} WINS! The Computer LOST! Paper conquers over Rock! (¬‿¬)✧ ");
                     userBalance = userBalance + (userBet * 2);
                     userPoints++;
                     computerPoints--;
-                    Console.Write("\t");
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine("(¬‿¬)✧");
-                    Console.ResetColor();
-                    Console.Write("\t");
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"{user}, you have gained the double of your bet money as well as a point.");
-                    Console.ResetColor();
+                    if (userBet == 2)
+                    {
+                        userBalance = userBalance + (userBet * userBet);
+                        Console.WriteLine($"You WON the game and the BET?! That's some good luck there! You won {(userBet * userBet).ToString("C")}");
+                    }
+                    if (userBet == 1)
+                    {
+                        userBalance = userBalance - userBet
+                        computerBalance = computerBalance + (userBet * userBet);
+                        Console.WriteLine($"Ohhhh...you WON the game yet lost the bet! Your opponent has earned {(userBet * userBet).ToString("C")}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("INVALID INPUT! BYE-BYE~~~");
+                        Console.WriteLine();
+                        Thread.Sleep(1000);
+                        Console.WriteLine("\t███████▀▀▀░░░░░░░▀▀▀███████");
+                        Console.WriteLine("\t████▀░░░░░░░░░░░░░░░░░▀████");
+                        Console.WriteLine("\t███│░░░░░░░░░░░░░░░░░░░│███");
+                        Console.WriteLine("\t██▌│░░░░░░░░░░░░░░░░░░░│▐██");
+                        Console.WriteLine("\t██░└┐░░░░░░░░░░░░░░░░░┌┘░██");
+                        Console.WriteLine("\t██░░└┐░░░░░░░░░░░░░░░┌┘░░██");
+                        Console.WriteLine("\t██░░┌┘▄▄▄▄▄░░░░░▄▄▄▄▄└┐░░██");
+                        Console.WriteLine("\t██▌░│██████▌░░░▐██████│░▐██");
+                        Console.WriteLine("\t███░│▐███▀▀░░▄░░▀▀███▌│░███");
+                        Console.WriteLine("\t██▀─┘░░░░░░░▐█▌░░░░░░░└─▀██");
+                        Console.WriteLine("\t██▄░░░▄▄▄▓░░▀█▀░░▓▄▄▄░░░▄██");
+                        Console.WriteLine("\t████▄─┘██▌░░░░░░░▐██└─▄████");
+                        Console.WriteLine("\t█████░░▐█─┬┬┬┬┬┬┬─█▌░░█████");
+                        Console.WriteLine("\t████▌░░░▀┬┼┼┼┼┼┼┼┬▀░░░▐████");
+                        Console.WriteLine("\t█████▄░░░└┴┴┴┴┴┴┴┘░░░▄█████");
+                        Console.WriteLine("\t███████▄░░░░░░░░░░░▄███████");
+                        Console.WriteLine("\t██████████▄▄▄▄▄▄▄██████████");
+                        return;
+                    }
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.ReadLine();
                     Console.Clear();
                 }
                 else if (userChoice == 3 && computerChoice == 2)
                 {
-                    Console.Write("\t");
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"{user} WINS! The Computer LOST! Scissor conquers over Paper!");
-                    Console.ResetColor();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"\t{user} WINS! The Computer LOST! Scissor conquers over Paper! (¬‿¬)✧ ");
                     userBalance = userBalance + (userBet * 2);
                     userPoints--;
                     computerPoints++;
-                    Console.Write("\t");
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine("(¬‿¬)✧");
-                    Console.ResetColor();
-                    Console.Write("\t");
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"{user}, you have gained the double of your bet money as well as a point.");
-                    Console.ResetColor();
+                    if (userBet == 3)
+                    {
+                        userBalance = userBalance + (userBet * userBet);
+                        Console.WriteLine($"You WON the game and the BET?! That's some good luck there! You won {(userBet * userBet).ToString("C")}");
+                    }
+                    if (userBet == 2)
+                    {
+                        userBalance = userBalance - userBet
+                        computerBalance = computerBalance + (userBet * userBet);
+                        Console.WriteLine($"Ohhhh...you WON the game yet lost the bet! Your opponent has earned {(userBet * userBet).ToString("C")}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("INVALID INPUT! BYE-BYE~~~");
+                        Console.WriteLine();
+                        Thread.Sleep(1000);
+                        Console.WriteLine("\t███████▀▀▀░░░░░░░▀▀▀███████");
+                        Console.WriteLine("\t████▀░░░░░░░░░░░░░░░░░▀████");
+                        Console.WriteLine("\t███│░░░░░░░░░░░░░░░░░░░│███");
+                        Console.WriteLine("\t██▌│░░░░░░░░░░░░░░░░░░░│▐██");
+                        Console.WriteLine("\t██░└┐░░░░░░░░░░░░░░░░░┌┘░██");
+                        Console.WriteLine("\t██░░└┐░░░░░░░░░░░░░░░┌┘░░██");
+                        Console.WriteLine("\t██░░┌┘▄▄▄▄▄░░░░░▄▄▄▄▄└┐░░██");
+                        Console.WriteLine("\t██▌░│██████▌░░░▐██████│░▐██");
+                        Console.WriteLine("\t███░│▐███▀▀░░▄░░▀▀███▌│░███");
+                        Console.WriteLine("\t██▀─┘░░░░░░░▐█▌░░░░░░░└─▀██");
+                        Console.WriteLine("\t██▄░░░▄▄▄▓░░▀█▀░░▓▄▄▄░░░▄██");
+                        Console.WriteLine("\t████▄─┘██▌░░░░░░░▐██└─▄████");
+                        Console.WriteLine("\t█████░░▐█─┬┬┬┬┬┬┬─█▌░░█████");
+                        Console.WriteLine("\t████▌░░░▀┬┼┼┼┼┼┼┼┬▀░░░▐████");
+                        Console.WriteLine("\t█████▄░░░└┴┴┴┴┴┴┴┘░░░▄█████");
+                        Console.WriteLine("\t███████▄░░░░░░░░░░░▄███████");
+                        Console.WriteLine("\t██████████▄▄▄▄▄▄▄██████████");
+                        return;
+                    }
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.ReadLine();
                     Console.Clear();
                 }
                 else
                 {
-                    Console.Write("\t");
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"It's a TIE! You do not lose any of your bet money or earn any either! No points gained or loss either!");
-                    Console.ResetColor();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"\tIt's a TIE! You do not lose any of your bet money or earn any either! No points gained or loss either!");
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.ReadLine();
                     Console.Clear();
                 }
+
 
                 Console.WriteLine("");
 
