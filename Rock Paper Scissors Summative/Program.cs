@@ -1,4 +1,5 @@
-﻿using System.Reflection.Metadata;
+﻿using System.ComponentModel.Design;
+using System.Reflection.Metadata;
 
 namespace Rock_Paper_Scissors_Summative
 {
@@ -124,7 +125,10 @@ namespace Rock_Paper_Scissors_Summative
 
                 computerChoice = generator.Next(1, 3);
 
-                while ()
+                if (computerChoice == 1 && userChoice == 2)
+                else if (computerChoice == 2 && userChoice = 3)
+                else if (computerChoice == 3 && userChoice == 1 )
+                else if (userChoice == )
                 
 
             }
