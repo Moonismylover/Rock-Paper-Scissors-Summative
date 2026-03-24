@@ -32,18 +32,18 @@ namespace Rock_Paper_Scissors_Summative
 
             if (ans == "yes")
             {
-                Console.WriteLine("\t████████████████████████████████\t _________________________________________________________________________");
-                Console.WriteLine("\t░▀▀███████████████████████████▀▀\t|       CONGRATS! YOU HAVE BEEN ACCEPTED TO PARTICIPATE IN A GAMBLE!      |");
-                Console.WriteLine("\t░░░░░▀█████████████████████▀▀░░░\t|                                                                         |");
-                Console.WriteLine("\t██▄▄░░░░▀▀██████████████▀░░░░▄▄█\t|  THIS IS A GAME OF 'ROCK PAPERS SCISSORS'! YOU WILL PLAY AGAINST THE    |");
-                Console.WriteLine("\t█████▄▄░░░░░▀▀██████▀▀░░░░▄▄████\t|  BOSS AKA THE COMPUTER. AFTER PICKING YOUR MOTION, YOU WILL BET ON WHO  |");
-                Console.WriteLine("\t█████████░░░░░░▀▀▀░░░░░░░▀██████\t|  YOU THINK WILL WIN THE ROUND. YOU WILL BE GIVEN A BANK BALANCE OF $100 |");
-                Console.WriteLine("\t██████▀▀░░░▄▄▄░░░░░░▄▄▄░░░░▀████\t|  AND IF YOU LOSE ALL THE CASH BEFORE THE END OR NOT, THE ONE WITH THE   |");
-                Console.WriteLine("\t████▀░░░░▄██████▄▄██████▄░░░░███\t|  MOST POINTS WINS! YOU GET TO CHOOSE YOUR BETTING AMOUNT, IF YOU GUESS  |");
-                Console.WriteLine("\t██▀░░░░▄██████████████████▄░░░▀█\t|  RIGHT, YOU GET DOUBLE! THE FINAL WINNER WILL BE DECLARED AFTER 10      |");
-                Console.WriteLine("\t░░▄▄██████████████████████████▄░\t|  ROUNDS OF PLAY! GUESS RIGHT = 1+ POINT VS. GUESS WRONG = -1 POINT.     |");
-                Console.WriteLine("\t▄███████████████████████████████\t|  GOOD LUCK DEAR FRIEND! OH! YOU CAN QUIT AT ANYTIME IF YOU PLEASE!      |");
-                Console.WriteLine("\t████████████████████████████████\t|_________________________________________________________________________|");
+                Console.WriteLine("\t████████████████████████████████\t __________________________________________________________________________________");
+                Console.WriteLine("\t░▀▀███████████████████████████▀▀\t|       CONGRATS! YOU HAVE BEEN ACCEPTED TO PARTICIPATE IN A GAMBLE!               |");
+                Console.WriteLine("\t░░░░░▀█████████████████████▀▀░░░\t|                                                                                  |");
+                Console.WriteLine("\t██▄▄░░░░▀▀██████████████▀░░░░▄▄█\t|  THIS IS A GAME OF 'ROCK PAPERS SCISSORS'! YOU WILL PLAY AGAINST THE BOSS AKA    |");
+                Console.WriteLine("\t█████▄▄░░░░░▀▀██████▀▀░░░░▄▄████\t|  THE COMPUTER. AFTER PICKING YOUR MOTION, YOU WILL BET ON WHO YOU THINK WILL WIN |");
+                Console.WriteLine("\t█████████░░░░░░▀▀▀░░░░░░░▀██████\t|  THE ROUND. YOU WILL BE GIVEN A BANK BALANCE OF $100. IF YOU LOSE ALL THE CASH   |");
+                Console.WriteLine("\t██████▀▀░░░▄▄▄░░░░░░▄▄▄░░░░▀████\t|  BEFORE THE END OR NOT, THE ONE WITH THE MOST POINTS (WINNER OF THE ROUND) WINS! |");
+                Console.WriteLine("\t████▀░░░░▄██████▄▄██████▄░░░░███\t|  THE POINTS ARE GAINED BY YOU GET TO CHOOSE YOUR BETTING AMOUNT, IF YOU GUESS    |");
+                Console.WriteLine("\t██▀░░░░▄██████████████████▄░░░▀█\t|  RIGHT, YOU GET DOUBLE! THE FINAL WINNER WILL BE DECLARED AFTER 10 ROUNDS OF     |");
+                Console.WriteLine("\t░░▄▄██████████████████████████▄░\t|  PLAY! GUESS RIGHT = 1+ POINT VS. GUESS WRONG = -1 POINT. GOOD LUCK DEAR FRIEND  |");
+                Console.WriteLine("\t▄███████████████████████████████\t|  CAUSE YOU NEED IT LIKE ALWAYS! YOU CAN QUIT AT ANYTIME IF YOU PLEASE!           |");
+                Console.WriteLine("\t████████████████████████████████\t|__________________________________________________________________________________|");
                 Console.WriteLine();
                 Console.WriteLine("\tPress Enter to continue!");
 
@@ -157,8 +157,8 @@ namespace Rock_Paper_Scissors_Summative
                     computerBalance = computerBalance + (userBet * 2);
                     userPoints--;
                     computerPoints++;
-                    Console.WriteLine("⎛⎝         ⎠⎞");
-                    Console.WriteLine(" ( ` ᢍ ´ ) ");
+                    Console.WriteLine("/t≖  ≖");
+                    Console.WriteLine("/t ‿");
                 }
                 else if (computerChoice == 2 && userChoice == 1)
                 {
@@ -167,8 +167,8 @@ namespace Rock_Paper_Scissors_Summative
                     computerBalance = computerBalance + (userBet * 2);
                     userPoints--;
                     computerPoints++;
-                    Console.WriteLine("⎛⎝         ⎠⎞");
-                    Console.WriteLine(" ( ` ᢍ ´ ) ");
+                    Console.WriteLine("/t≖  ≖");
+                    Console.WriteLine("/t ‿");
                 }
                 else if (computerChoice == 3 && userChoice == 2)
                 {
@@ -177,39 +177,39 @@ namespace Rock_Paper_Scissors_Summative
                     computerBalance = computerBalance + (userBet * 2);
                     userPoints--;
                     computerPoints++;
-                    Console.WriteLine("⎛⎝         ⎠⎞");
-                    Console.WriteLine(" ( ` ᢍ ´ ) ");
+                    Console.WriteLine("/t≖  ≖");
+                    Console.WriteLine("/t ‿");
                 }
                 else if (userChoice == 1 && computerChoice == 3)
                 {
                     Console.WriteLine($"\t{user} WINS! The Computer LOST! Rock conquers over Scissor!");
                     userBalance = userBalance + (userBet * 2);
-                    computerBalance = computerBalance - (userBet * 2);
                     userPoints++;
                     computerPoints--;
-                    Console.WriteLine("⎛⎝         ⎠⎞");
-                    Console.WriteLine(" ( ` ᢍ ´ ) ");
+                    Console.WriteLine("/t≖  ≖");
+                    Console.WriteLine("/t ‿");
                 }
                 else if (userChoice == 2 && computerChoice == 1)
                 {
                     Console.WriteLine($"\t{user} WINS! The Computer LOST! Paper conquers over Rock!");
-                    userBalance = userBalance + userBet;
-                    computerBalance = computerBalance + (userBet * 2);
+                    userBalance = userBalance + (userBet * 2);
                     userPoints++;
                     computerPoints--;
-                    Console.WriteLine("⎛⎝         ⎠⎞");
-                    Console.WriteLine(" ( ` ᢍ ´ ) ");
+                    Console.WriteLine("/t≖  ≖");
+                    Console.WriteLine("/t ‿");
                 }
                 else if (userChoice == 3 && computerChoice == 2)
                 {
                     Console.WriteLine($"\t{user} WINS! The Computer LOST! Scissor conquers over Paper!");
                     userBalance = userBalance + (userBet * 2);
-                    computerBalance = computerBalance - (userBet * 2);
                     userPoints--;
                     computerPoints++;
-                    Console.WriteLine("⎛⎝         ⎠⎞");
-                    Console.WriteLine(" ( ` ᢍ ´ ) ");
+                    Console.WriteLine("/t≖  ≖");
+                    Console.WriteLine("/t ‿");
                 }
+
+                Console.WriteLine("");
+
 
                 // rock 1 - scissors 3
                 // paper 2 - rock 1
