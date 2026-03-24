@@ -106,6 +106,7 @@ namespace Rock_Paper_Scissors_Summative
                 Console.ForegroundColor = ConsoleColor.Black;
                 userChoice = Convert.ToInt32(Console.ReadLine());
 
+
                 
             }
         }
