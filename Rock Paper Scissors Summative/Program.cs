@@ -166,12 +166,11 @@ namespace Rock_Paper_Scissors_Summative
                     Console.BackgroundColor = ConsoleColor.Black;
                     Console.WriteLine("(¬‿¬)✧");
                     Console.ResetColor();
-                    Console.WriteLine();
                     Console.Write("\t");
                     Console.BackgroundColor = ConsoleColor.Black;
                     Console.WriteLine($"{user}, you have lost your bet money as well as a point.");
                     Console.ResetColor();
-
+                    Console.ReadLine();
                     Console.Clear();
                 }
                 else if (computerChoice == 2 && userChoice == 1)
@@ -188,12 +187,11 @@ namespace Rock_Paper_Scissors_Summative
                     Console.BackgroundColor = ConsoleColor.Black;
                     Console.WriteLine("(¬‿¬)✧");
                     Console.ResetColor();
-                    Console.WriteLine();
                     Console.Write("\t");
                     Console.BackgroundColor = ConsoleColor.Black; 
                     Console.WriteLine($"{user}, you have lost your bet money as well as a point.");
                     Console.ResetColor();
-
+                    Console.ReadLine();
                     Console.Clear();
                 }
                 else if (computerChoice == 3 && userChoice == 2)
@@ -210,12 +208,11 @@ namespace Rock_Paper_Scissors_Summative
                     Console.BackgroundColor = ConsoleColor.Black;
                     Console.WriteLine("(¬‿¬ )✧");
                     Console.ResetColor();
-                    Console.WriteLine();
                     Console.Write("\t");
                     Console.BackgroundColor = ConsoleColor.Black;
                     Console.WriteLine($"{user}, you have lost your bet money as well as a point.");
                     Console.ResetColor();
-
+                    Console.ReadLine();
                     Console.Clear();
                 }
                 else if (userChoice == 1 && computerChoice == 3)
@@ -231,12 +228,11 @@ namespace Rock_Paper_Scissors_Summative
                     Console.BackgroundColor = ConsoleColor.Black;
                     Console.WriteLine("(¬‿¬)✧");
                     Console.ResetColor();
-                    Console.WriteLine();
                     Console.Write("\t");
                     Console.BackgroundColor = ConsoleColor.Black;
                     Console.WriteLine($"{user}, you have gained the double of your bet money as well as a point.");
                     Console.ResetColor();
-
+                    Console.ReadLine();
                     Console.Clear();
                 }
                 else if (userChoice == 2 && computerChoice == 1)
@@ -252,12 +248,11 @@ namespace Rock_Paper_Scissors_Summative
                     Console.BackgroundColor = ConsoleColor.Black;
                     Console.WriteLine("(¬‿¬)✧");
                     Console.ResetColor();
-                    Console.WriteLine();
                     Console.Write("\t");
                     Console.BackgroundColor = ConsoleColor.Black;
                     Console.WriteLine($"{user}, you have gained the double of your bet money as well as a point.");
                     Console.ResetColor();
-
+                    Console.ReadLine();
                     Console.Clear();
                 }
                 else if (userChoice == 3 && computerChoice == 2)
@@ -273,12 +268,11 @@ namespace Rock_Paper_Scissors_Summative
                     Console.BackgroundColor = ConsoleColor.Black;
                     Console.WriteLine("(¬‿¬)✧");
                     Console.ResetColor();
-                    Console.WriteLine();
                     Console.Write("\t");
                     Console.BackgroundColor = ConsoleColor.Black;
                     Console.WriteLine($"{user}, you have gained the double of your bet money as well as a point.");
                     Console.ResetColor();
-
+                    Console.ReadLine();
                     Console.Clear();
                 }
                 else
@@ -287,7 +281,7 @@ namespace Rock_Paper_Scissors_Summative
                     Console.BackgroundColor = ConsoleColor.Black;
                     Console.WriteLine($"It's a TIE! You do not lose any of your bet money or earn any either! No points gained or loss either!");
                     Console.ResetColor();
-
+                    Console.ReadLine();
                     Console.Clear();
                 }
 
