@@ -154,101 +154,141 @@ namespace Rock_Paper_Scissors_Summative
 
                 if (computerChoice == 1 && userChoice == 3)
                 {
-                    Console.BackgroundColor = ConsoleColor.Black; 
-                    Console.WriteLine($"\tThe Computer WINS! You LOSE! Rock conquers over Paper!");
+                    Console.Write("\t");
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.WriteLine("The Computer WINS! You LOSE! Rock conquers over Paper!");
+                    Console.ResetColor();
                     userBalance = userBalance - userBet;
                     computerBalance = computerBalance + (userBet * 2);
                     userPoints--;
                     computerPoints++;
-                    Console.BackgroundColor = ConsoleColor.DarkBlue;
+                    Console.Write("\t");
                     Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine("\t(¬‿¬)✧");
+                    Console.WriteLine("(¬‿¬)✧");
+                    Console.ResetColor();
                     Console.WriteLine();
-                    Console.BackgroundColor = ConsoleColor.DarkBlue;
+                    Console.Write("\t");
                     Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"\t{user}, you have lost your bet money as well as a point.");
+                    Console.WriteLine($"{user}, you have lost your bet money as well as a point.");
+                    Console.ResetColor();
+
+                    Console.Clear();
                 }
                 else if (computerChoice == 2 && userChoice == 1)
                 {
+                    Console.Write("\t");
                     Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"\tThe Computer WINS! You LOSE! Paper conquers over Rock!");
+                    Console.WriteLine($"The Computer WINS! You LOSE! Paper conquers over Rock!");
+                    Console.ResetColor();
                     userBalance = userBalance - userBet;
                     computerBalance = computerBalance + (userBet * 2);
                     userPoints--;
                     computerPoints++;
-                    Console.BackgroundColor = ConsoleColor.DarkBlue;
-                    Console.BackgroundColor = ConsoleColor.Black; 
-                    Console.WriteLine("\t(¬‿¬)✧");
+                    Console.Write("\t");
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.WriteLine("(¬‿¬)✧");
+                    Console.ResetColor();
                     Console.WriteLine();
-                    Console.BackgroundColor = ConsoleColor.DarkBlue;
-                    Console.BackgroundColor = ConsoleColor.Black;  
-                    Console.WriteLine($"\t{user}, you have lost your bet money as well as a point.");
+                    Console.Write("\t");
+                    Console.BackgroundColor = ConsoleColor.Black; 
+                    Console.WriteLine($"{user}, you have lost your bet money as well as a point.");
+                    Console.ResetColor();
+
+                    Console.Clear();
                 }
                 else if (computerChoice == 3 && userChoice == 2)
                 {
+                    Console.Write("\t");
                     Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"\tThe Computer WINS! You LOSE! Scissor conquers over Paper!");
+                    Console.WriteLine($"The Computer WINS! You LOSE! Scissor conquers over Paper!");
+                    Console.ResetColor();
                     userBalance = userBalance - userBet;
                     computerBalance = computerBalance + (userBet * 2);
                     userPoints--;
                     computerPoints++;
-                    Console.BackgroundColor = ConsoleColor.DarkBlue;
+                    Console.Write("\t");
                     Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine("\t(¬‿¬ )✧");
+                    Console.WriteLine("(¬‿¬ )✧");
+                    Console.ResetColor();
                     Console.WriteLine();
-                    Console.BackgroundColor = ConsoleColor.DarkBlue;
+                    Console.Write("\t");
                     Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"\t{user}, you have lost your bet money as well as a point.");
+                    Console.WriteLine($"{user}, you have lost your bet money as well as a point.");
+                    Console.ResetColor();
+
+                    Console.Clear();
                 }
                 else if (userChoice == 1 && computerChoice == 3)
                 {
+                    Console.Write("\t");
                     Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"\t{user} WINS! The Computer LOST! Rock conquers over Scissor!");
+                    Console.WriteLine($"{user} WINS! The Computer LOST! Rock conquers over Scissor!");
+                    Console.ResetColor();
                     userBalance = userBalance + (userBet * 2);
                     userPoints++;
                     computerPoints--;
-                    Console.BackgroundColor = ConsoleColor.DarkBlue;
+                    Console.Write("\t");
                     Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine("\t(¬‿¬)✧");
+                    Console.WriteLine("(¬‿¬)✧");
+                    Console.ResetColor();
                     Console.WriteLine();
-                    Console.BackgroundColor = ConsoleColor.DarkBlue;
+                    Console.Write("\t");
                     Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"\t{user}, you have gained the double of your bet money as well as a point.");
+                    Console.WriteLine($"{user}, you have gained the double of your bet money as well as a point.");
+                    Console.ResetColor();
+
+                    Console.Clear();
                 }
                 else if (userChoice == 2 && computerChoice == 1)
                 {
+                    Console.Write("\t");
                     Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"\t{user} WINS! The Computer LOST! Paper conquers over Rock!");
+                    Console.WriteLine($"{user} WINS! The Computer LOST! Paper conquers over Rock!");
+                    Console.ResetColor();
                     userBalance = userBalance + (userBet * 2);
                     userPoints++;
                     computerPoints--;
-                    Console.BackgroundColor = ConsoleColor.DarkBlue;
+                    Console.Write("\t");
                     Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine("\t(¬‿¬)✧");
+                    Console.WriteLine("(¬‿¬)✧");
+                    Console.ResetColor();
                     Console.WriteLine();
-                    Console.BackgroundColor = ConsoleColor.DarkBlue;
+                    Console.Write("\t");
                     Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"\t{user}, you have gained the double of your bet money as well as a point.");
+                    Console.WriteLine($"{user}, you have gained the double of your bet money as well as a point.");
+                    Console.ResetColor();
+
+                    Console.Clear();
                 }
                 else if (userChoice == 3 && computerChoice == 2)
                 {
+                    Console.Write("\t");
                     Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"\t{user} WINS! The Computer LOST! Scissor conquers over Paper!");
+                    Console.WriteLine($"{user} WINS! The Computer LOST! Scissor conquers over Paper!");
+                    Console.ResetColor();
                     userBalance = userBalance + (userBet * 2);
                     userPoints--;
                     computerPoints++;
-                    Console.BackgroundColor = ConsoleColor.DarkBlue;
+                    Console.Write("\t");
                     Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine("\t(¬‿¬)✧");
+                    Console.WriteLine("(¬‿¬)✧");
+                    Console.ResetColor();
                     Console.WriteLine();
-                    Console.BackgroundColor = ConsoleColor.DarkBlue;
+                    Console.Write("\t");
                     Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"\t{user}, you have gained the double of your bet money as well as a point.");
+                    Console.WriteLine($"{user}, you have gained the double of your bet money as well as a point.");
+                    Console.ResetColor();
+
+                    Console.Clear();
                 }
                 else
                 {
+                    Console.Write("\t");
                     Console.BackgroundColor = ConsoleColor.Black;
-                    Console.WriteLine($"\tIt's a TIE! You do not lose any of your bet money or earn any either! No points gained or loss either!");
+                    Console.WriteLine($"It's a TIE! You do not lose any of your bet money or earn any either! No points gained or loss either!");
+                    Console.ResetColor();
+
+                    Console.Clear();
                 }
 
                 Console.WriteLine("");
