@@ -125,11 +125,34 @@ namespace Rock_Paper_Scissors_Summative
 
                 computerChoice = generator.Next(1, 3);
 
-                if (computerChoice == 1 && userChoice == 2)
-                else if (computerChoice == 2 && userChoice = 3)
-                else if (computerChoice == 3 && userChoice == 1 )
-                else if (userChoice == )
+                if (computerChoice == 1 && userChoice == 3)
+                {
+
+                }
+                else if (computerChoice == 2 && userChoice = 1)
+                {
+
+                }
+                else if (computerChoice == 3 && userChoice == 2)
+                {
+
+                }
+                else if (userChoice == 1 && computerChoice == 3)
+                {
+
+                }
+                else if (userChoice == 2 && computerChoice == 1)
+                {
+
+                }
+                else if (userChoice == 3 && computerChoice == 2)
+                {
+
+                }
                 
+                                    // rock 1 - scissors 3
+                                    // paper 2 - rock 1
+                                    // scissors 3 - paper 2
 
             }
         }
