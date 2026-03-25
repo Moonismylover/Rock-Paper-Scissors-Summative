@@ -84,7 +84,7 @@ namespace Rock_Paper_Scissors_Summative
         {
             Console.Title = "Rock Paper Scissor...SHOOT!";
 
-            string user;
+            string user, winner;
             int userChoice, userBalance = 100, userPoints = 0, computerChoice, computerBalance = 100, computerPoints = 0, userBet, betAmount;
 
             Random generator = new Random();
@@ -335,11 +335,22 @@ namespace Rock_Paper_Scissors_Summative
 
                 if (userBalance <= 0)
                 {
-                    Console.WriteLine("How unfortunate! You ran out of cash! You cannot continue anymore. The winner will be decided based on the points!");
+                    Console.WriteLine("\tHow unfortunate! You ran out of cash! You cannot continue anymore. The winner will be decided based on the points!");
                     Thread.Sleep(500);
-                    Console.WriteLine("DRUMROLL.....");
+                    Console.WriteLine("\tDRUMROLL.....");
                     Thread.Sleep(1500);
-                    Console.WriteLine($"The winner of the game is {}")
+                    if (userBalance > computerBalance)
+                    {
+                        Console.WriteLine($"\tThe winner of the game is {user}!");
+                        Console.WriteLine();
+                        Console.WriteLine($"\tEnding Scores: \n\n\t{user}: \n\tBank Balance: {userBalance} \n\tPoints: {userPoints} \n\n\tComputer: \n\tBank Balance:{computerBalance} \n\tPoints: {computerPoints});
+                    }
+                    else if (userBalance < computerBalance)
+                    {
+                        Console.WriteLine($"\tThe winner of the game is the Computer!");
+                        Console.WriteLine();
+                        Console.WriteLine($"\tEnding Scores: \n\n\t{user}: \n\tBank Balance: {userBalance} \n\tPoints: {userPoints} \n\n\tComputer: \n\tBank Balance:{computerBalance} \n\tPoints: {computerPoints});
+                    }
                     return;
                 }
                 if (computerBalance <= 0)
@@ -348,6 +359,18 @@ namespace Rock_Paper_Scissors_Summative
                     Thread.Sleep(500);
                     Console.WriteLine("DRUMROLL.....");
                     Thread.Sleep(1500);
+                    if (userBalance > computerBalance)
+                    {
+                        Console.WriteLine($"\tThe winner of the game is {user}!");
+                        Console.WriteLine();
+                        Console.WriteLine($"\tEnding Scores: \n\n\t{user}: \n\tBank Balance: {userBalance} \n\tPoints: {userPoints} \n\n\tComputer: \n\tBank Balance:{computerBalance} \n\tPoints: {computerPoints});
+                    }
+                    else if (userBalance < computerBalance)
+                    {
+                        Console.WriteLine($"\tThe winner of the game is the Computer!");
+                        Console.WriteLine();
+                        Console.WriteLine($"\tEnding Scores: \n\n\t{user}: \n\tBank Balance: {userBalance} \n\tPoints: {userPoints} \n\n\tComputer: \n\tBank Balance:{computerBalance} \n\tPoints: {computerPoints});
+                    }
                     return;
                 }
 
