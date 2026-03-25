@@ -333,8 +333,23 @@ namespace Rock_Paper_Scissors_Summative
                     Console.Clear();
                 }
 
-
-                Console.WriteLine("");
+                if (userBalance <= 0)
+                {
+                    Console.WriteLine("How unfortunate! You ran out of cash! You cannot continue anymore. The winner will be decided based on the points!");
+                    Thread.Sleep(500);
+                    Console.WriteLine("DRUMROLL.....");
+                    Thread.Sleep(1500);
+                    Console.WriteLine($"The winner of the game is {}")
+                    return;
+                }
+                if (computerBalance <= 0)
+                {
+                    Console.WriteLine("How nice! Your opponent ran out of cash! The game cannot continue anymore. The winner will be decided based on the points!");
+                    Thread.Sleep(500);
+                    Console.WriteLine("DRUMROLL.....");
+                    Thread.Sleep(1500);
+                    return;
+                }
 
 
                 // rock 1 - scissors 3
