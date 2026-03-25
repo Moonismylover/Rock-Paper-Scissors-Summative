@@ -430,7 +430,41 @@ namespace Rock_Paper_Scissors_Summative
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"\tIt's a TIE! You do not lose the game so NO POINTS!");
-                    if ()
+                    if (userBet == userChoice)
+                    {
+                        userBalance = userBalance + (userBet * userBet);
+                        Console.WriteLine($"\tBUT since you guessed the result correctly! You gained {(userBet * userBet).ToString("C")}!");
+                    }
+                    else if (userBet != userChoice)
+                    {
+                        userBalance = userBalance - userBet
+                        computerBalance = computerBalance + (userBet * userBet);
+                        Console.WriteLine($"\tBUT since you guessed the result incorrectly! Your opponent gained {(userBet * userBet).ToString("C")}!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("INVALID INPUT! BYE-BYE~~~");
+                        Console.WriteLine();
+                        Thread.Sleep(1000);
+                        Console.WriteLine("\t███████▀▀▀░░░░░░░▀▀▀███████");
+                        Console.WriteLine("\t████▀░░░░░░░░░░░░░░░░░▀████");
+                        Console.WriteLine("\t███│░░░░░░░░░░░░░░░░░░░│███");
+                        Console.WriteLine("\t██▌│░░░░░░░░░░░░░░░░░░░│▐██");
+                        Console.WriteLine("\t██░└┐░░░░░░░░░░░░░░░░░┌┘░██");
+                        Console.WriteLine("\t██░░└┐░░░░░░░░░░░░░░░┌┘░░██");
+                        Console.WriteLine("\t██░░┌┘▄▄▄▄▄░░░░░▄▄▄▄▄└┐░░██");
+                        Console.WriteLine("\t██▌░│██████▌░░░▐██████│░▐██");
+                        Console.WriteLine("\t███░│▐███▀▀░░▄░░▀▀███▌│░███");
+                        Console.WriteLine("\t██▀─┘░░░░░░░▐█▌░░░░░░░└─▀██");
+                        Console.WriteLine("\t██▄░░░▄▄▄▓░░▀█▀░░▓▄▄▄░░░▄██");
+                        Console.WriteLine("\t████▄─┘██▌░░░░░░░▐██└─▄████");
+                        Console.WriteLine("\t█████░░▐█─┬┬┬┬┬┬┬─█▌░░█████");
+                        Console.WriteLine("\t████▌░░░▀┬┼┼┼┼┼┼┼┬▀░░░▐████");
+                        Console.WriteLine("\t█████▄░░░└┴┴┴┴┴┴┴┘░░░▄█████");
+                        Console.WriteLine("\t███████▄░░░░░░░░░░░▄███████");
+                        Console.WriteLine("\t██████████▄▄▄▄▄▄▄██████████");
+                        return;
+                    }
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.ReadLine();
                     Console.Clear();
