@@ -35,12 +35,12 @@ namespace Rock_Paper_Scissors_Summative
                 Console.WriteLine("\t████████████████████████████████\t __________________________________________________________________________________");
                 Console.WriteLine("\t░▀▀███████████████████████████▀▀\t|       CONGRATS! YOU HAVE BEEN ACCEPTED TO PARTICIPATE IN A GAMBLE!               |");
                 Console.WriteLine("\t░░░░░▀█████████████████████▀▀░░░\t|                                                                                  |");
-                Console.WriteLine("\t██▄▄░░░░▀▀██████████████▀░░░░▄▄█\t|  THIS IS A GAME OF 'ROCK PAPERS SCISSORS'! YOU WILL PLAY AGAINST THE BOSS AKA    |");
-                Console.WriteLine("\t█████▄▄░░░░░▀▀██████▀▀░░░░▄▄████\t|  THE COMPUTER. AFTER PICKING YOUR MOTION, YOU WILL BET ON WHO YOU THINK WILL WIN |");
-                Console.WriteLine("\t█████████░░░░░░▀▀▀░░░░░░░▀██████\t|  THE ROUND. YOU WILL BE GIVEN A BANK BALANCE OF $100. IF YOU LOSE ALL THE CASH   |");
-                Console.WriteLine("\t██████▀▀░░░▄▄▄░░░░░░▄▄▄░░░░▀████\t|  BEFORE THE END OR NOT, THE ONE WITH THE MOST POINTS (WINNER OF THE ROUND) WINS! |");
-                Console.WriteLine("\t████▀░░░░▄██████▄▄██████▄░░░░███\t|  THE POINTS ARE GAINED BY YOU GET TO CHOOSE YOUR BETTING AMOUNT, IF YOU GUESS    |");
-                Console.WriteLine("\t██▀░░░░▄██████████████████▄░░░▀█\t|  RIGHT, YOU GET DOUBLE! THE FINAL WINNER WILL BE DECLARED AFTER 10 ROUNDS OF     |");
+                Console.WriteLine("\t██▄▄░░░░▀▀██████████████▀░░░░▄▄█\t|  THIS IS A GAME OF 'ROCK PAPER SCISSOR'! YOU WILL PLAY AGAINST THE BOSS AKA THE  |");
+                Console.WriteLine("\t█████▄▄░░░░░▀▀██████▀▀░░░░▄▄████\t|  COMPUTER. AFTER PICKING YOUR MOTION, YOU WILL BET ON WHO YOU THINK WILL WIN THE |");
+                Console.WriteLine("\t█████████░░░░░░▀▀▀░░░░░░░▀██████\t|  ROUND. YOU WILL BE GIVEN A BANK BALANCE OF $100. IF YOU LOSE ALL THE CASH       |");
+                Console.WriteLine("\t██████▀▀░░░▄▄▄░░░░░░▄▄▄░░░░▀████\t|  BEFORE THE END OR NOT, THE ONE WITH THE MOST POINTS WINS! POINTS ARE GAINED BY  |");
+                Console.WriteLine("\t████▀░░░░▄██████▄▄██████▄░░░░███\t|  WINNING THE ROUNDS. YOU GET TO CHOOSE YOUR BETTING AMOUNT! IF YOU GUESS RIGHT,  |");
+                Console.WriteLine("\t██▀░░░░▄██████████████████▄░░░▀█\t|  YOU GET DOUBLE THE AMOUNT! THE FINAL WINNER WILL BE DECLARED AFTER 10 ROUNDS OF |");
                 Console.WriteLine("\t░░▄▄██████████████████████████▄░\t|  PLAY! GUESS RIGHT = 1+ POINT VS. GUESS WRONG = -1 POINT. GOOD LUCK DEAR FRIEND  |");
                 Console.WriteLine("\t▄███████████████████████████████\t|  CAUSE YOU NEED IT LIKE ALWAYS! YOU CAN QUIT AT ANYTIME IF YOU PLEASE!           |");
                 Console.WriteLine("\t████████████████████████████████\t|__________________________________________________________________________________|");
@@ -191,7 +191,6 @@ namespace Rock_Paper_Scissors_Summative
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("\tThe Computer WINS! You LOSE! Rock conquers over Scissor! (¬‿¬)✧ ");
-                    userPoints--;
                     computerPoints++;
                     if (userBet == 2)
                     {
@@ -212,7 +211,6 @@ namespace Rock_Paper_Scissors_Summative
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"\tThe Computer WINS! You LOSE! Paper conquers over Rock! (¬‿¬)✧ ");
-                    userPoints--;
                     computerPoints++;
                     if (userBet == 2)
                     {
@@ -233,7 +231,6 @@ namespace Rock_Paper_Scissors_Summative
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"\tThe Computer WINS! You LOSE! Scissor conquers over Paper! (¬‿¬)✧ ");
-                    userPoints--;
                     computerPoints++;
                     if (userBet == 2)
                     {
@@ -255,7 +252,6 @@ namespace Rock_Paper_Scissors_Summative
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"\t{user} WINS! The Computer LOST! Rock conquers over Scissor! (¬‿¬)✧ ");
                     userPoints++;
-                    computerPoints--;
                     if (userBet == 1)
                     {
                         userBalance = userBalance + (betAmount * 2);
@@ -276,7 +272,6 @@ namespace Rock_Paper_Scissors_Summative
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"\t{user} WINS! The Computer LOST! Paper conquers over Rock! (¬‿¬)✧ ");
                     userPoints++;
-                    computerPoints--;
                     if (userBet == 1)
                     {
                         userBalance = userBalance + (betAmount * 2);
@@ -296,8 +291,7 @@ namespace Rock_Paper_Scissors_Summative
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"\t{user} WINS! The Computer LOST! Scissor conquers over Paper! (¬‿¬)✧ ");
-                    userPoints--;
-                    computerPoints++;
+                    userPoints++;
                     if (userBet == 1)
                     {
                         userBalance = userBalance + (betAmount * 2);
@@ -316,68 +310,74 @@ namespace Rock_Paper_Scissors_Summative
                 else if (userChoice == computerChoice)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"\tIt's a TIE! You do not lose the game so NO POINTS!");
+                    Console.WriteLine($"\tIt's a TIE! No one lost the game...BUT I'm feeling generous so...EVERYONE GETS A POINT!");
+                    userPoints++;
+                    computerPoints++;
                     if (userBet == userChoice)
                     {
                         userBalance = userBalance + (betAmount * 2);
-                        Console.WriteLine($"\tBUT since you guessed the result correctly! You gained {(betAmount * 2).ToString("C")}!");
+                        Console.WriteLine($"\tSince you guessed the result correctly... you gained {(betAmount * 2).ToString("C")}!");
                     }
                     else if (userBet != userChoice)
                     {
                         userBalance = userBalance - betAmount;
                         computerBalance = computerBalance + (betAmount * 2);
-                        Console.WriteLine($"\tBUT since you guessed the result incorrectly! Your opponent gained {(betAmount * 2).ToString("C")}!");
+                        Console.WriteLine($"\tSince you guessed the result incorrectly... your opponent gained {(betAmount * 2).ToString("C")}!");
                     }
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.ReadLine();
                     Console.Clear();
                 }
 
+                
+
                 if (userBalance <= 0)
                 {
+                    Console.WriteLine();
                     Console.WriteLine("\tHow unfortunate! You ran out of cash! You cannot continue anymore. The winner will be decided based on the points!");
-                    Thread.Sleep(500);
+                    Thread.Sleep(2000);
+                    Console.WriteLine();
                     Console.WriteLine("\tDRUMROLL.....");
-                    Thread.Sleep(1500);
+                    Console.WriteLine();
+                    Thread.Sleep(3000);
                     if (userBalance > computerBalance)
                     {
                         Console.WriteLine($"\tThe winner of the game is {user}!");
                         Console.WriteLine();
-                        Console.WriteLine($"\tEnding Scores: \n\n\t{user}: \n\tBank Balance: {userBalance} \n\tPoints: {userPoints} \n\n\tComputer: \n\tBank Balance:{computerBalance} \n\tPoints: {computerPoints});
+                        Console.WriteLine($"\tEnding Scores: \n\n\t{user}: \n\tBank Balance: {userBalance} \n\tPoints: {userPoints} \n\n\tComputer: \n\tBank Balance: {computerBalance} \n\tPoints: {computerPoints}");
                     }
                     else if (userBalance < computerBalance)
                     {
                         Console.WriteLine($"\tThe winner of the game is the Computer!");
                         Console.WriteLine();
-                        Console.WriteLine($"\tEnding Scores: \n\n\t{user}: \n\tBank Balance: {userBalance} \n\tPoints: {userPoints} \n\n\tComputer: \n\tBank Balance:{computerBalance} \n\tPoints: {computerPoints});
+                        Console.WriteLine($"\tEnding Scores: \n\n\t{user}: \n\tBank Balance: {userBalance} \n\tPoints: {userPoints} \n\n\tComputer: \n\tBank Balance: {computerBalance} \n\tPoints: {computerPoints}");
                     }
                     return;
                 }
+
                 if (computerBalance <= 0)
                 {
+                    Console.WriteLine();
                     Console.WriteLine("How nice! Your opponent ran out of cash! The game cannot continue anymore. The winner will be decided based on the points!");
-                    Thread.Sleep(500);
+                    Thread.Sleep(2000);
+                    Console.WriteLine();
                     Console.WriteLine("DRUMROLL.....");
-                    Thread.Sleep(1500);
+                    Console.WriteLine();
+                    Thread.Sleep(3000);
                     if (userBalance > computerBalance)
                     {
                         Console.WriteLine($"\tThe winner of the game is {user}!");
                         Console.WriteLine();
-                        Console.WriteLine($"\tEnding Scores: \n\n\t{user}: \n\tBank Balance: {userBalance} \n\tPoints: {userPoints} \n\n\tComputer: \n\tBank Balance:{computerBalance} \n\tPoints: {computerPoints});
+                        Console.WriteLine($"\tEnding Scores: \n\n\t{user}: \n\tBank Balance: {userBalance} \n\tPoints: {userPoints} \n\n\tComputer: \n\tBank Balance: {computerBalance} \n\tPoints: {computerPoints}");
                     }
                     else if (userBalance < computerBalance)
                     {
                         Console.WriteLine($"\tThe winner of the game is the Computer!");
                         Console.WriteLine();
-                        Console.WriteLine($"\tEnding Scores: \n\n\t{user}: \n\tBank Balance: {userBalance} \n\tPoints: {userPoints} \n\n\tComputer: \n\tBank Balance:{computerBalance} \n\tPoints: {computerPoints});
+                        Console.WriteLine($"\tEnding Scores: \n\n\t{user}: \n\tBank Balance: {userBalance} \n\tPoints: {userPoints} \n\n\tComputer: \n\tBank Balance: {computerBalance} \n\tPoints: {computerPoints}");
                     }
                     return;
                 }
-
-
-                // rock 1 - scissors 3
-                // paper 2 - rock 1
-                // scissors 3 - paper 2
 
             }
         }
@@ -388,133 +388,3 @@ namespace Rock_Paper_Scissors_Summative
         }
     }
 }
-
-//Rock Paper Scissors Summative
-
-//For this mini summative, you will program a fully functional version of Rock Paper
-//Scissors (or some
-//variant of the game). For full marks, the user needs to be able to bet on their
-//choice and be
-//informed of their winnings/losings.
-//There are three components that will determine your overall mark:
-//1.Does it work?
-// Can the user make a choice?
-// Does the computer make a choice?
-// Is the correct winner determined?
-// Can the user quit?
-//2. How well does it play?
-// Is it easy/intuitive to make a choice?
-// Is it easy/intuitive to quit?
-// Do the prompts tell the user exactly what to do/what has happened?
-// Visually organized, appropriate spacing, clear prompts?
-// How is bad input handled?
-// Are there any bugs? Can the user mess it up?
-//3. What additional features have you added?
-// Is there a betting system? How are bets validated?
-//o When the player runs out of money, the game needs to end?
-// Stat tracking.
-// Timers.
-// Beeps.
-// Visuals:
-//o Clutter
-//o Color
-//o ASCII art
-
-//Where to Begin?
-//You will need to variables to store the following things at a minimum:
-//o Users choice (paper, scissors, rock, quit).
-//o Computers choice (paper, scissors, rock).
-//o Users bank account.
-//o Users bet amount.
-//Before the game rounds begin, there should be an introduction explaining how the game is played
-//(maybe an option to view the rules)
-
-//Game Flow
-//In order to determine what order to do things, it is important to think about what needs to happen
-//before the user starts playing the rounds of the game.
-// Declare and initialize variables.
-//o Does the user need to input any starting values?
-// Introduction prompt.
-//Once the initial setup is done, what needs to happen inside the game loop?
-// The user places a bet.
-// The user makes a choice.
-// The computer makes a choice.
-// The winner is determined.
-// The winnings/losings is resolved.
-// Is there another round to be played?
-//After the game is over, is there some sort of farewell message?
-//When the user is expected to input, what mistakes can they make? How will your program recover?
-//Don’t forget to make your game look pretty:
-//https://sites.google.com/gotvdsb.ca/aldworth/home/ics3u-c/fun-with-the-console
-
-//Marking Rubric
-//Level 4 Level 3 Level 2 Level 1
-//Game always runs
-//correctly: all user
-//input is validated,
-//winner/winnings
-//correctly calculated
-//and tracked
-//Gameplay flows
-//naturally, is highly
-//intuitive to use and
-//highly visually
-//appealing (formatted
-//text, spacing)
-//Additional features
-//used to enhance the
-//game (visuals, flow
-//control, stats)
-//-No/minimal teacher
-//assistance required
-
-//Game mostly runs
-//correctly: user input is
-//mostly validated,
-//winner/winnings
-//correctly calculated
-
-//Gameplay flows well
-//is intuitive to use and
-//visually appealing
-//(formatted text,
-//spacing)
-
-//At least one additional
-//feature used to
-//enhance the game
-//(visuals, flow control,
-//stats)
-//-Some teacher
-//assistance required
-
-//Game somewhat runs
-//correctly: input is
-//somewhat validated,
-//winner correctly
-//calculated, some
-//bugs may be present
-//Gameplay somewhat
-//flows well, is
-//somewhat intuitive to
-//use and somewhat
-//visually appealing
-
-//No additional features
-//used to enhance
-//game.
-
-//-Teacher assistance
-//required frequently
-
-//Game runs but:
-//contains multiple
-//bugs
-
-//Gameplay feels
-//awkward, is not
-//intuitive to use and is
-//not visually appealing
-
-//Not all features
-//present.
