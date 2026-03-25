@@ -152,7 +152,16 @@ namespace Rock_Paper_Scissors_Summative
 
                 computerChoice = generator.Next(1, 4);
 
-                
+                if (userChoice == 4)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Thread.Sleep(500);
+                    Console.WriteLine("Some people just never try...don't they? Anyways, until next time then!");
+                    Console.WriteLine();
+                    Thread.Sleep(500);
+
+                }
+
                 if (computerChoice == 1 && userChoice == 3)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -161,14 +170,14 @@ namespace Rock_Paper_Scissors_Summative
                     computerPoints++;
                     if (userBet == 1)
                     {
-                        userBalance = userBalance + (userBet * userBet);
-                        Console.WriteLine($"\tEven though you lost the game...You won {(userBet * userBet).ToString("C")} from your bet!");
+                        userBalance = userBalance + (betAmount * betAmount);
+                        Console.WriteLine($"\tEven though you lost the game...You won {(betAmount * betAmount).ToString("C")} from your bet!");
                     }
                     else if (userBet == 2)
                     {
-                        userBalance = userBalance - userBet;
-                        computerBalance = computerBalance + (userBet * userBet);
-                        Console.WriteLine($"\tDamn, that's sad...You lost the game...You lost the bet too? Your opponenet won {(userBet + userBet).ToString("C")}!"); 
+                        userBalance = userBalance - betAmount;
+                        computerBalance = computerBalance + (betAmount * betAmount);
+                        Console.WriteLine($"\tDamn, that's sad...You lost the game...You lost the bet too? Your opponenet won {(betAmount * betAmount).ToString("C")}!"); 
                     }
                     else
                     {
@@ -206,14 +215,14 @@ namespace Rock_Paper_Scissors_Summative
                     computerPoints++;
                     if (userBet == 2)
                     {
-                        userBalance = userBalance + (userBet * userBet);
-                        Console.WriteLine($"\tEven though you lost the game...You won {(userBet * userBet).ToString("C")} from your bet!");
+                        userBalance = userBalance + (betAmount * betAmount);
+                        Console.WriteLine($"\tEven though you lost the game...You won {(betAmount * betAmount).ToString("C")} from your bet!");
                     }
                     else if (userBet == 1)
                     {
-                        userBalance = userBalance - userBet;
-                        computerBalance = computerBalance + (userBet * userBet);
-                        Console.WriteLine($"\tDamn, that's sad...You lost the game...You lost the bet too? Your opponenet won {(userBet + userBet).ToString("C")}!");
+                        userBalance = userBalance - betAmount;
+                        computerBalance = computerBalance + (betAmount * betAmount);
+                        Console.WriteLine($"\tDamn, that's sad...You lost the game...You lost the bet too? Your opponenet won {(betAmount * betAmount).ToString("C")}!");
                     }
                     else
                     {
@@ -251,14 +260,14 @@ namespace Rock_Paper_Scissors_Summative
                     computerPoints++;
                     if (userBet == 3)
                     {
-                        userBalance = userBalance + (userBet * userBet);
-                        Console.WriteLine($"\tEven though you lost the game...You won {(userBet * userBet).ToString("C")} from your bet!");
+                        userBalance = userBalance + (betAmount * betAmount);
+                        Console.WriteLine($"\tEven though you lost the game...You won {(betAmount * betAmount).ToString("C")} from your bet!");
                     }
                     else if (userBet == 2)
                     {
-                        userBalance = userBalance - userBet;
-                        computerBalance = computerBalance + (userBet * userBet);
-                        Console.WriteLine($"\tDamn, that's sad...You lost the game...You lost the bet too? Your opponenet won {(userBet + userBet).ToString("C")}!");
+                        userBalance = userBalance - betAmount;
+                        computerBalance = computerBalance + (betAmount * betAmount);
+                        Console.WriteLine($"\tDamn, that's sad...You lost the game...You lost the bet too? Your opponenet won {(betAmount * betAmount).ToString("C")}!");
                     }
                     else
                     {
@@ -292,19 +301,18 @@ namespace Rock_Paper_Scissors_Summative
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"\t{user} WINS! The Computer LOST! Rock conquers over Scissor! (¬‿¬)✧ ");
-                    userBalance = userBalance + (userBet * 2);
                     userPoints++;
                     computerPoints--;
                     if (userBet == 1)
                     {
-                        userBalance = userBalance + (userBet * userBet);
-                        Console.WriteLine($"You WON the game and the BET?! That's some good luck there! You won {(userBet * userBet).ToString("C")}");
+                        userBalance = userBalance + (betAmount * betAmount);
+                        Console.WriteLine($"\tYou WON the game and the BET?! That's some good luck there! You won {(betAmount * betAmount).ToString("C")}");
                     }
                     if (userBet == 3)
                     {
-                        userBalance = userBalance - userBet;
-                        computerBalance = computerBalance + (userBet * userBet);
-                        Console.WriteLine($"Ohhhh...you WON the game yet lost the bet! Your opponent has earned {(userBet * userBet).ToString("C")}");
+                        userBalance = userBalance - betAmount;
+                        computerBalance = computerBalance + (betAmount * betAmount);
+                        Console.WriteLine($"\tOhhhh...you WON the game yet lost the bet! Your opponent has earned {(betAmount * betAmount).ToString("C")}");
                     }
                     else
                     {
@@ -338,19 +346,18 @@ namespace Rock_Paper_Scissors_Summative
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"\t{user} WINS! The Computer LOST! Paper conquers over Rock! (¬‿¬)✧ ");
-                    userBalance = userBalance + (userBet * 2);
                     userPoints++;
                     computerPoints--;
                     if (userBet == 2)
                     {
-                        userBalance = userBalance + (userBet * userBet);
-                        Console.WriteLine($"You WON the game and the BET?! That's some good luck there! You won {(userBet * userBet).ToString("C")}");
+                        userBalance = userBalance + (betAmount * betAmount);
+                        Console.WriteLine($"\tYou WON the game and the BET?! That's some good luck there! You won {(betAmount * betAmount).ToString("C")}");
                     }
                     if (userBet == 1)
                     {
-                        userBalance = userBalance - userBet;
-                        computerBalance = computerBalance + (userBet * userBet);
-                        Console.WriteLine($"Ohhhh...you WON the game yet lost the bet! Your opponent has earned {(userBet * userBet).ToString("C")}");
+                        userBalance = userBalance - betAmount;
+                        computerBalance = computerBalance + (betAmount * betAmount);
+                        Console.WriteLine($"\tOhhhh...you WON the game yet lost the bet! Your opponent has earned {(betAmount * betAmount).ToString("C")}");
                     }
                     else
                     {
@@ -384,19 +391,18 @@ namespace Rock_Paper_Scissors_Summative
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"\t{user} WINS! The Computer LOST! Scissor conquers over Paper! (¬‿¬)✧ ");
-                    userBalance = userBalance + (userBet * 2);
                     userPoints--;
                     computerPoints++;
                     if (userBet == 3)
                     {
-                        userBalance = userBalance + (userBet * userBet);
-                        Console.WriteLine($"You WON the game and the BET?! That's some good luck there! You won {(userBet * userBet).ToString("C")}");
+                        userBalance = userBalance + (betAmount * betAmount);
+                        Console.WriteLine($"\tYou WON the game and the BET?! That's some good luck there! You won {(betAmount * betAmount).ToString("C")}");
                     }
                     if (userBet == 2)
                     {
-                        userBalance = userBalance - userBet;
-                        computerBalance = computerBalance + (userBet * userBet);
-                        Console.WriteLine($"Ohhhh...you WON the game yet lost the bet! Your opponent has earned {(userBet * userBet).ToString("C")}");
+                        userBalance = userBalance - betAmount;
+                        computerBalance = computerBalance + (betAmount * betAmount);
+                        Console.WriteLine($"\tOhhhh...you WON the game yet lost the bet! Your opponent has earned {(betAmount * betAmount).ToString("C")}");
                     }
                     else
                     {
@@ -432,14 +438,14 @@ namespace Rock_Paper_Scissors_Summative
                     Console.WriteLine($"\tIt's a TIE! You do not lose the game so NO POINTS!");
                     if (userBet == userChoice)
                     {
-                        userBalance = userBalance + (userBet * userBet);
-                        Console.WriteLine($"\tBUT since you guessed the result correctly! You gained {(userBet * userBet).ToString("C")}!");
+                        userBalance = userBalance + (betAmount * betAmount);
+                        Console.WriteLine($"\tBUT since you guessed the result correctly! You gained {(betAmount * betAmount).ToString("C")}!");
                     }
                     else if (userBet != userChoice)
                     {
-                        userBalance = userBalance - userBet
-                        computerBalance = computerBalance + (userBet * userBet);
-                        Console.WriteLine($"\tBUT since you guessed the result incorrectly! Your opponent gained {(userBet * userBet).ToString("C")}!");
+                        userBalance = userBalance - betAmount;
+                        computerBalance = computerBalance + (betAmount * betAmount);
+                        Console.WriteLine($"\tBUT since you guessed the result incorrectly! Your opponent gained {(betAmount * betAmount).ToString("C")}!");
                     }
                     else
                     {
