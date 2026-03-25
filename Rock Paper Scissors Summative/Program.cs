@@ -114,26 +114,36 @@ namespace Rock_Paper_Scissors_Summative
 
                 if (userChoice == 4)
                 {
-                    Console.WriteLine("\tYou just missed the chance to earn some money! Too bad! Until next time then!");
+                    Thread.Sleep(500);
+                    Console.WriteLine();
+                    Console.WriteLine("\tSome people just never try...don't they? Anyways, until next time then!");
                     Console.WriteLine();
                     Thread.Sleep(1000);
-                    Console.WriteLine("\t███████▀▀▀░░░░░░░▀▀▀███████");
-                    Console.WriteLine("\t████▀░░░░░░░░░░░░░░░░░▀████");
-                    Console.WriteLine("\t███│░░░░░░░░░░░░░░░░░░░│███");
-                    Console.WriteLine("\t██▌│░░░░░░░░░░░░░░░░░░░│▐██");
-                    Console.WriteLine("\t██░└┐░░░░░░░░░░░░░░░░░┌┘░██");
-                    Console.WriteLine("\t██░░└┐░░░░░░░░░░░░░░░┌┘░░██");
-                    Console.WriteLine("\t██░░┌┘▄▄▄▄▄░░░░░▄▄▄▄▄└┐░░██");
-                    Console.WriteLine("\t██▌░│██████▌░░░▐██████│░▐██");
-                    Console.WriteLine("\t███░│▐███▀▀░░▄░░▀▀███▌│░███");
-                    Console.WriteLine("\t██▀─┘░░░░░░░▐█▌░░░░░░░└─▀██");
-                    Console.WriteLine("\t██▄░░░▄▄▄▓░░▀█▀░░▓▄▄▄░░░▄██");
-                    Console.WriteLine("\t████▄─┘██▌░░░░░░░▐██└─▄████");
-                    Console.WriteLine("\t█████░░▐█─┬┬┬┬┬┬┬─█▌░░█████");
-                    Console.WriteLine("\t████▌░░░▀┬┼┼┼┼┼┼┼┬▀░░░▐████");
-                    Console.WriteLine("\t█████▄░░░└┴┴┴┴┴┴┴┘░░░▄█████");
-                    Console.WriteLine("\t███████▄░░░░░░░░░░░▄███████");
-                    Console.WriteLine("\t██████████▄▄▄▄▄▄▄██████████");
+                    Console.WriteLine("\t┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼");
+                    Console.WriteLine("\t███▀▀▀██┼███▀▀▀███┼███▀█▄█▀███┼██▀▀▀");
+                    Console.WriteLine("\t██┼┼┼┼██┼██┼┼┼┼┼██┼██┼┼┼█┼┼┼██┼██┼┼┼");
+                    Console.WriteLine("\t██┼┼┼▄▄▄┼██▄▄▄▄▄██┼██┼┼┼▀┼┼┼██┼██▀▀▀");
+                    Console.WriteLine("\t██┼┼┼┼██┼██┼┼┼┼┼██┼██┼┼┼┼┼┼┼██┼██┼┼┼");
+                    Console.WriteLine("\t███▄▄▄██┼██┼┼┼┼┼██┼██┼┼┼┼┼┼┼██┼██▄▄▄");
+                    Console.WriteLine("\t┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼");
+                    Console.WriteLine("\t███▀▀▀███┼▀███┼┼██▀┼██▀▀▀┼██▀▀▀▀██▄┼");
+                    Console.WriteLine("\t██┼┼┼┼┼██┼┼┼██┼┼██┼┼██┼┼┼┼██┼┼┼┼┼██┼");
+                    Console.WriteLine("\t██┼┼┼┼┼██┼┼┼██┼┼██┼┼██▀▀▀┼██▄▄▄▄▄▀▀┼");
+                    Console.WriteLine("\t██┼┼┼┼┼██┼┼┼██┼┼█▀┼┼██┼┼┼┼██┼┼┼┼┼██┼");
+                    Console.WriteLine("\t███▄▄▄███┼┼┼─▀█▀┼┼─┼██▄▄▄┼██┼┼┼┼┼██▄");
+                    Console.WriteLine("\t┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼");
+                    Console.WriteLine("\t┼┼┼┼┼┼┼┼██┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼██┼┼┼┼┼┼┼┼┼");
+                    Console.WriteLine("\t┼┼┼┼┼┼████▄┼┼┼▄▄▄▄▄▄▄┼┼┼▄████┼┼┼┼┼┼┼");
+                    Console.WriteLine("\t┼┼┼┼┼┼┼┼┼▀▀█▄█████████▄█▀▀┼┼┼┼┼┼┼┼┼┼");
+                    Console.WriteLine("\t┼┼┼┼┼┼┼┼┼┼┼█████████████┼┼┼┼┼┼┼┼┼┼┼┼");
+                    Console.WriteLine("\t┼┼┼┼┼┼┼┼┼┼┼██▀▀▀███▀▀▀██┼┼┼┼┼┼┼┼┼┼┼┼");
+                    Console.WriteLine("\t┼┼┼┼┼┼┼┼┼┼┼██┼┼┼███┼┼┼██┼┼┼┼┼┼┼┼┼┼┼┼");
+                    Console.WriteLine("\t┼┼┼┼┼┼┼┼┼┼┼█████▀▄▀█████┼┼┼┼┼┼┼┼┼┼┼┼");
+                    Console.WriteLine("\t┼┼┼┼┼┼┼┼┼┼┼┼███████████┼┼┼┼┼┼┼┼┼┼┼┼┼");
+                    Console.WriteLine("\t┼┼┼┼┼┼┼┼▄▄▄██┼┼█▀█▀█┼┼██▄▄▄┼┼┼┼┼┼┼┼┼");
+                    Console.WriteLine("\t┼┼┼┼┼┼┼┼▀▀██┼┼┼┼┼┼┼┼┼┼┼██▀▀┼┼┼┼┼┼┼┼┼");
+                    Console.WriteLine("\t┼┼┼┼┼┼┼┼┼┼▀▀┼┼┼┼┼┼┼┼┼┼┼▀▀┼┼┼┼┼┼┼┼┼┼┼");
+                    Console.WriteLine("\t┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼┼");
                     return;
                 }
 
@@ -152,20 +162,10 @@ namespace Rock_Paper_Scissors_Summative
 
                 computerChoice = generator.Next(1, 4);
 
-                if (userChoice == 4)
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Thread.Sleep(500);
-                    Console.WriteLine("Some people just never try...don't they? Anyways, until next time then!");
-                    Console.WriteLine();
-                    Thread.Sleep(500);
-
-                }
-
                 if (computerChoice == 1 && userChoice == 3)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("\tThe Computer WINS! You LOSE! Rock conquers over Paper! (¬‿¬)✧ ");
+                    Console.WriteLine("\tThe Computer WINS! You LOSE! conquers over Paper! (¬‿¬)✧ ");
                     userPoints--;
                     computerPoints++;
                     if (userBet == 1)
