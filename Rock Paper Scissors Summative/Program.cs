@@ -12,18 +12,12 @@ namespace Rock_Paper_Scissors_Summative
 
             string ans;
 
-            WindowsMediaPlayer player = new WindowsMediaPlayer();
-            player.URL = "";
-            player.controls.play();
-
-            Console.ReadKey();
-
             Console.BackgroundColor = ConsoleColor.DarkRed;
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine();
             Thread.Sleep(500);
-            Console.WriteLine("\t █╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗");
+            Console.WriteLine("\t██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗");
             Console.WriteLine("\t██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝");
             Console.WriteLine("\t██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗  ");
             Console.WriteLine("\t██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝  ");
@@ -119,7 +113,34 @@ namespace Rock_Paper_Scissors_Summative
                 userChoice = Convert.ToInt32(Console.ReadLine());
                 Console.ForegroundColor = ConsoleColor.White;
 
-                if (userChoice == 4)
+                if (userChoice != 1 && userChoice != 2 && userChoice != 3 && userChoice != 4)
+                {
+
+                    Console.WriteLine();
+                    Console.WriteLine("\tINVALID INPUT! BYE-BYE~~~");
+                    Console.WriteLine();
+                    Thread.Sleep(1000);
+                    Console.WriteLine("\t███████▀▀▀░░░░░░░▀▀▀███████");
+                    Console.WriteLine("\t████▀░░░░░░░░░░░░░░░░░▀████");
+                    Console.WriteLine("\t███│░░░░░░░░░░░░░░░░░░░│███");
+                    Console.WriteLine("\t██▌│░░░░░░░░░░░░░░░░░░░│▐██");
+                    Console.WriteLine("\t██░└┐░░░░░░░░░░░░░░░░░┌┘░██");
+                    Console.WriteLine("\t██░░└┐░░░░░░░░░░░░░░░┌┘░░██");
+                    Console.WriteLine("\t██░░┌┘▄▄▄▄▄░░░░░▄▄▄▄▄└┐░░██");
+                    Console.WriteLine("\t██▌░│██████▌░░░▐██████│░▐██");
+                    Console.WriteLine("\t███░│▐███▀▀░░▄░░▀▀███▌│░███");
+                    Console.WriteLine("\t██▀─┘░░░░░░░▐█▌░░░░░░░└─▀██");
+                    Console.WriteLine("\t██▄░░░▄▄▄▓░░▀█▀░░▓▄▄▄░░░▄██");
+                    Console.WriteLine("\t████▄─┘██▌░░░░░░░▐██└─▄████");
+                    Console.WriteLine("\t█████░░▐█─┬┬┬┬┬┬┬─█▌░░█████");
+                    Console.WriteLine("\t████▌░░░▀┬┼┼┼┼┼┼┼┬▀░░░▐████");
+                    Console.WriteLine("\t█████▄░░░└┴┴┴┴┴┴┴┘░░░▄█████");
+                    Console.WriteLine("\t███████▄░░░░░░░░░░░▄███████");
+                    Console.WriteLine("\t██████████▄▄▄▄▄▄▄██████████");
+                    return;
+                }
+
+                    if (userChoice == 4)
                 {
                     Thread.Sleep(500);
                     Console.WriteLine();
