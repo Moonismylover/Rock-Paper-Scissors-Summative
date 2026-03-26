@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.Design;
 using System.Reflection.Metadata;
-using WMPLib;
 
 namespace Rock_Paper_Scissors_Summative
 {
