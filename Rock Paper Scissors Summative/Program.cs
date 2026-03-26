@@ -329,7 +329,29 @@ namespace Rock_Paper_Scissors_Summative
                     Console.Clear();
                 }
 
-                
+                while (round != 10)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Congrats on finishing the game!");
+                    Console.WriteLine();
+                    if (userBalance > computerBalance)
+                    {
+                        Console.WriteLine($"\tThe winner of the game is {user}!");
+                        Console.WriteLine();
+                        Console.WriteLine($"\tEnding Scores: \n\n\t{user}: \n\tBank Balance: {userBalance} \n\tPoints: {userPoints} \n\n\tComputer: \n\tBank Balance: {computerBalance} \n\tPoints: {computerPoints}");
+                        Console.WriteLine();
+                        Console.WriteLine("I guess you ain't as hopeless as I imagined...then until next time! Peace!");
+                        return;
+                    }
+                    else if (userBalance < computerBalance)
+                    {
+                        Console.WriteLine($"\tThe winner of the game is the Computer!");
+                        Console.WriteLine();
+                        Console.WriteLine($"\tEnding Scores: \n\n\t{user}: \n\tBank Balance: {userBalance} \n\tPoints: {userPoints} \n\n\tComputer: \n\tBank Balance: {computerBalance} \n\tPoints: {computerPoints}");
+                        Console.WriteLine("Ah...I had already predicted the result...hope to never see you again~~~ Peace!");
+                        return;
+                    }
+                }
 
                 if (userBalance <= 0)
                 {
@@ -378,7 +400,6 @@ namespace Rock_Paper_Scissors_Summative
                     }
                     return;
                 }
-
             }
         }
 
