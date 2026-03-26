@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.Design;
 using System.Reflection.Metadata;
+using WMPLib;
 
 namespace Rock_Paper_Scissors_Summative
 {
@@ -10,6 +11,12 @@ namespace Rock_Paper_Scissors_Summative
             Console.Title = "Rock Paper Sicssors Gamble";
 
             string ans;
+
+            WindowsMediaPlayer player = new WindowsMediaPlayer();
+            player.URL = "";
+            player.controls.play();
+
+            Console.ReadKey();
 
             Console.BackgroundColor = ConsoleColor.DarkRed;
             Console.Clear();
@@ -379,6 +386,7 @@ namespace Rock_Paper_Scissors_Summative
             }
 
             Console.WriteLine();
+            Thread.Sleep(1500);
             Console.WriteLine("Congrats on finishing the game!");
             Console.WriteLine();
             if (userBalance > computerBalance)
@@ -398,11 +406,11 @@ namespace Rock_Paper_Scissors_Summative
                 Console.WriteLine("Ah...I had already predicted the result...hope to never see you again~~~ Peace!");
                 return;
             }
-
-            static void Main(string[] args)
-            {
-                Introduction();
-            }
         }
+
+        static void Main(string[] args)
+        {
+            Introduction();
+        } 
     }
 }
