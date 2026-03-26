@@ -201,7 +201,7 @@ namespace Rock_Paper_Scissors_Summative
                     {
                         userBalance = userBalance - betAmount;
                         computerBalance = computerBalance + (betAmount * 2);
-                        Console.WriteLine($"\tDamn, that's sad...You lost the game...You lost the bet too? Your opponenet won {(betAmount * 2).ToString("C")}!"); 
+                        Console.WriteLine($"\tDamn, that's sad...You lost the game...You lost the bet too? Your opponenet won {(betAmount * 2).ToString("C")}!");
                     }
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.ReadLine();
@@ -329,30 +329,6 @@ namespace Rock_Paper_Scissors_Summative
                     Console.Clear();
                 }
 
-                while (round != 10)
-                {
-                    Console.WriteLine();
-                    Console.WriteLine("Congrats on finishing the game!");
-                    Console.WriteLine();
-                    if (userBalance > computerBalance)
-                    {
-                        Console.WriteLine($"\tThe winner of the game is {user}!");
-                        Console.WriteLine();
-                        Console.WriteLine($"\tEnding Scores: \n\n\t{user}: \n\tBank Balance: {userBalance} \n\tPoints: {userPoints} \n\n\tComputer: \n\tBank Balance: {computerBalance} \n\tPoints: {computerPoints}");
-                        Console.WriteLine();
-                        Console.WriteLine("I guess you ain't as hopeless as I imagined...then until next time! Peace!");
-                        return;
-                    }
-                    else if (userBalance < computerBalance)
-                    {
-                        Console.WriteLine($"\tThe winner of the game is the Computer!");
-                        Console.WriteLine();
-                        Console.WriteLine($"\tEnding Scores: \n\n\t{user}: \n\tBank Balance: {userBalance} \n\tPoints: {userPoints} \n\n\tComputer: \n\tBank Balance: {computerBalance} \n\tPoints: {computerPoints}");
-                        Console.WriteLine("Ah...I had already predicted the result...hope to never see you again~~~ Peace!");
-                        return;
-                    }
-                }
-
                 if (userBalance <= 0)
                 {
                     Console.WriteLine();
@@ -401,11 +377,32 @@ namespace Rock_Paper_Scissors_Summative
                     return;
                 }
             }
-        }
 
-        static void Main(string[] args)
-        {
-            Introduction();
+            Console.WriteLine();
+            Console.WriteLine("Congrats on finishing the game!");
+            Console.WriteLine();
+            if (userBalance > computerBalance)
+            {
+                Console.WriteLine($"\tThe winner of the game is {user}!");
+                Console.WriteLine();
+                Console.WriteLine($"\tEnding Scores: \n\n\t{user}: \n\tBank Balance: {userBalance} \n\tPoints: {userPoints} \n\n\tComputer: \n\tBank Balance: {computerBalance} \n\tPoints: {computerPoints}");
+                Console.WriteLine();
+                Console.WriteLine("I guess you ain't as hopeless as I imagined...then until next time! Peace!");
+                return;
+            }
+            else if (userBalance < computerBalance)
+            {
+                Console.WriteLine($"\tThe winner of the game is the Computer!");
+                Console.WriteLine();
+                Console.WriteLine($"\tEnding Scores: \n\n\t{user}: \n\tBank Balance: {userBalance} \n\tPoints: {userPoints} \n\n\tComputer: \n\tBank Balance: {computerBalance} \n\tPoints: {computerPoints}");
+                Console.WriteLine("Ah...I had already predicted the result...hope to never see you again~~~ Peace!");
+                return;
+            }
+
+            static void Main(string[] args)
+            {
+                Introduction();
+            }
         }
     }
 }
